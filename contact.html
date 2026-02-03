@@ -28,19 +28,19 @@
         <h2 class="text-6xl font-black text-center mb-16 uppercase italic">Let's <span class="gold-text">Connect</span></h2>
         
         <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-10 p-8">
+            <div class="space-y-10 p-8 text-center md:text-left">
                 <div>
                     <h3 class="text-xs font-black gold-text uppercase tracking-[0.3em] mb-4">Direct Line</h3>
                     <p class="text-3xl font-light">+27 60 959 2514</p>
                 </div>
-                <div class="flex space-x-6 pt-4">
+                <div class="flex justify-center md:justify-start space-x-6 pt-4">
                     <a href="https://wa.me/27609592514" class="text-4xl hover:text-green-500 transition-all"><i class="fab fa-whatsapp"></i></a>
                     <a href="#" class="text-4xl hover:text-pink-500 transition-all"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
             <div class="card-premium p-10 rounded-[40px]">
-                <form action="thank-you.html" method="GET" class="space-y-6">
+                <form action="thank-you.html" method="POST" class="space-y-6">
                     <input type="text" placeholder="FULL NAME" required class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 transition-all text-[10px] tracking-widest uppercase">
                     <input type="email" placeholder="EMAIL ADDRESS" required class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 transition-all text-[10px] tracking-widest uppercase">
                     <textarea placeholder="HOW CAN WE HELP?" rows="4" required class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 transition-all text-[10px] tracking-widest uppercase"></textarea>
@@ -52,10 +52,23 @@
         </div>
     </section>
 
+    <footer class="py-20 px-6 border-t border-white/10 bg-black/90">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
+                <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Soweto &bull; Beyond</p>
+            </div>
+            <div class="flex bg-white/5 rounded-full border border-white/10 p-1">
+                <input type="email" placeholder="NEWSLETTER" class="bg-transparent px-6 py-3 flex-grow text-[10px] focus:outline-none uppercase tracking-widest">
+                <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase hover:bg-yellow-600 transition">Join</button>
+            </div>
+        </div>
+    </footer>
+
     <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>window.addEventListener('load', () => { document.getElementById('preloader').style.opacity = '0'; setTimeout(() => { document.getElementById('preloader').style.display = 'none'; }, 800); });</script>
+    <script src="script.js"></script>
 </body>
 </html>
