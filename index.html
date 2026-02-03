@@ -9,7 +9,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-slate-950 text-white">
-
     <div id="preloader"><div class="loader-logo"></div></div>
 
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
@@ -24,8 +23,7 @@
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1920&q=80" 
-             class="absolute w-full h-full object-cover opacity-40" alt="Africa Nature">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1920&q=80" class="absolute w-full h-full object-cover opacity-40">
         <div class="relative z-10 text-center px-6">
             <h1 class="text-7xl md:text-9xl font-black uppercase italic tracking-tighter mb-4">Explore <br><span class="gold-text">Mzansi</span></h1>
             <p class="text-xs md:text-sm uppercase tracking-[0.5em] opacity-60 mb-10">Luxury Curated Travel Experiences</p>
@@ -36,37 +34,15 @@
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-premium p-10 rounded-[40px] text-center group">
-                <i class="fas fa-wine-glass-alt text-4xl gold-text mb-6 transition-transform group-hover:scale-110"></i>
-                <h3 class="font-black uppercase mb-4 tracking-widest text-sm">Luxury Tours</h3>
-                <p class="text-[10px] opacity-50 leading-relaxed uppercase tracking-widest">From vineyards to historic landmarks.</p>
-            </div>
-            <div class="card-premium p-10 rounded-[40px] text-center group">
-                <i class="fas fa-shuttle-van text-4xl gold-text mb-6 transition-transform group-hover:scale-110"></i>
-                <h3 class="font-black uppercase mb-4 tracking-widest text-sm">Private Transport</h3>
-                <p class="text-[10px] opacity-50 leading-relaxed uppercase tracking-widest">Safe, premium chauffeur services.</p>
-            </div>
-            <div class="card-premium p-10 rounded-[40px] text-center group">
-                <i class="fas fa-concierge-bell text-4xl gold-text mb-6 transition-transform group-hover:scale-110"></i>
-                <h3 class="font-black uppercase mb-4 tracking-widest text-sm">VIP Concierge</h3>
-                <p class="text-[10px] opacity-50 leading-relaxed uppercase tracking-widest">Tailored itineraries just for you.</p>
-            </div>
-        </div>
-    </section>
-
     <footer class="py-20 px-6 border-t border-white/10 bg-black/90">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="text-center md:text-left">
                 <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
-                <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Heart of South African History</p>
+                <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Soweto &bull; Beyond</p>
             </div>
-            <div class="flex flex-col space-y-4">
-                <div class="flex bg-white/5 rounded-full border border-white/10 p-1">
-                    <input type="email" placeholder="JOIN NEWSLETTER" class="bg-transparent px-6 py-3 flex-grow text-[10px] focus:outline-none uppercase tracking-widest">
-                    <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase">Join</button>
-                </div>
+            <div class="flex bg-white/5 rounded-full border border-white/10 p-1">
+                <input type="email" placeholder="NEWSLETTER" class="bg-transparent px-6 py-3 flex-grow text-[10px] focus:outline-none uppercase tracking-widest">
+                <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase">Join</button>
             </div>
         </div>
     </footer>
@@ -75,12 +51,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            preloader.style.opacity = '0';
-            setTimeout(() => { preloader.style.display = 'none'; }, 800);
-        });
-    </script>
+    <script>window.addEventListener('load', () => { document.getElementById('preloader').style.opacity = '0'; setTimeout(() => { document.getElementById('preloader').style.display = 'none'; }, 800); });</script>
 </body>
 </html>
