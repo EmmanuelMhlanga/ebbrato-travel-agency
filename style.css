@@ -1,8 +1,4 @@
-/* EBBRATO TRAVEL AGENCY - MASTER STYLESHEET
-    Designed for: High-End Luxury Aesthetic
-*/
-
-/* --- 1. CORE RESET & BASE --- */
+/* EBBRATO MASTER STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -11,16 +7,13 @@
 }
 
 body {
-    background-color: #020617; /* Slate-950 */
+    background-color: #020617;
     overflow-x: hidden;
 }
 
-.gold-text {
-    color: #d4af37;
-}
+.gold-text { color: #d4af37; }
 
-/* --- 2. AESTHETICALLY MOVING BACKGROUND --- */
-/* This creates a fixed parallax effect for a premium feel */
+/* Fixed Luxury Background */
 .beach-theme {
     background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), 
                 url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
@@ -30,7 +23,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- 3. LUXURY GLASS CARDS (GLASSMORPHISM) --- */
+/* Glassmorphism Cards */
 .card-premium {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -43,16 +36,13 @@ body {
     transform: translateY(-10px);
     border-color: #d4af37;
     background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-/* --- 4. LUXURY PRELOADER --- */
+/* Preloader UI */
 #preloader {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: #020617;
     display: flex;
     justify-content: center;
@@ -62,27 +52,18 @@ body {
 }
 
 .loader-logo {
-    width: 60px;
-    height: 60px;
+    width: 60px; height: 60px;
     border: 3px solid #d4af37;
     border-top: 3px solid transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+@keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* --- 5. FLOATING WHATSAPP PULSE --- */
+/* WhatsApp Pulse */
 .whatsapp-float {
     animation: pulse-green 2s infinite;
-    transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.15) rotate(5deg);
 }
 
 @keyframes pulse-green {
@@ -91,53 +72,7 @@ body {
     100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }
 
-/* --- 6. FAQ ACCORDION --- */
-.faq-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
-    opacity: 0;
-}
-
-.faq-item.active .faq-content {
-    max-height: 250px;
-    margin-top: 1rem;
-    opacity: 1;
-}
-
-.faq-item.active {
-    border-color: #d4af37;
-}
-
-.faq-item.active i {
-    transform: rotate(180deg);
-    color: #d4af37;
-}
-
-/* --- 7. LUXURY IMAGE HOVER --- */
-img {
-    transition: filter 0.8s ease, transform 0.8s ease;
-}
-
-/* Make images grayscale by default and color on hover for the Gallery and About pages */
-.group:hover img, .card-premium:hover img {
-    filter: grayscale(0%);
-}
-
-.card-premium img {
-    filter: grayscale(30%); /* Subtle luxury fade */
-}
-
-/* --- 8. MASONRY GALLERY (For gallery.html) --- */
-@media (min-width: 768px) {
-    .columns-custom {
-        column-count: 2;
-        column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .columns-custom {
-        column-count: 3;
-    }
-}
+/* Image Hover Grayscale */
+img { transition: filter 0.8s ease, transform 0.8s ease; }
+.card-premium:hover img { filter: grayscale(0%); transform: scale(1.05); }
+.card-premium img { filter: grayscale(40%); }
