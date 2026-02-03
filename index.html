@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBBRATO | Luxury South African Travel Agency</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description" content="Elite South African travel experiences curated by Ebenezer and Lerato.">
+    <title>About | EBBRATO TRAVEL AGENCY</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -16,19 +15,46 @@
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
         <div class="text-xl font-black uppercase tracking-tighter">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></div>
         <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
-            <a href="index.html" class="gold-text">Home</a>
-            <a href="about.html" class="hover:text-yellow-500 transition">About</a>
+            <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
+            <a href="about.html" class="gold-text">About</a>
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
             <a href="contact.html" class="hover:text-yellow-500 transition">Contact</a>
         </div>
     </nav>
 
-    <section class="h-screen flex items-center justify-center text-center px-6 relative overflow-hidden">
-        <div class="z-10">
-            <h1 class="text-7xl md:text-9xl font-black uppercase italic tracking-tighter mb-4">Mzansi <span class="gold-text">Elite</span></h1>
-            <p class="text-[10px] tracking-[0.5em] uppercase opacity-50 mb-12">Johannesburg • Cape Town • Kruger</p>
-            <a href="packages.html" class="bg-white text-black px-12 py-4 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition">Explore Tours</a>
+    <div class="h-40"></div>
+
+    <section class="py-10 px-6 max-w-7xl mx-auto mb-20">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80" class="rounded-[60px] h-[500px] w-full object-cover shadow-2xl border border-white/10">
+            <div class="space-y-6">
+                <h2 class="text-6xl font-black uppercase italic tracking-tighter">Our <span class="gold-text">Mission</span></h2>
+                <p class="text-sm font-light leading-relaxed opacity-80">
+                    At EBBRATO, we bridge the gap between world-class luxury and the raw, vibrant history of South Africa. 
+                    Founded by Ebenezer and Lerato, we curate exclusive moments that stay with you forever.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <h2 class="text-4xl font-black text-center mb-16 uppercase italic">The <span class="gold-text">Curators</span></h2>
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div class="card-premium p-10 rounded-[40px] text-center group">
+                <div class="w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-2 border-yellow-600/30 p-1">
+                    <img src="ebenezer.jpg?v=2" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <h3 class="text-xl font-black uppercase">Ebenezer Mhlanga</h3>
+                <p class="gold-text text-[10px] font-black uppercase tracking-widest mt-2">Travel Consultant</p>
+            </div>
+            <div class="card-premium p-10 rounded-[40px] text-center group">
+                <div class="w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-2 border-yellow-600/30 p-1">
+                    <img src="lerato.jpg?v=2" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <h3 class="text-xl font-black uppercase">Lerato Ndlovu</h3>
+                <p class="gold-text text-[10px] font-black uppercase tracking-widest mt-2">Agency Specialist</p>
+            </div>
         </div>
     </section>
 
