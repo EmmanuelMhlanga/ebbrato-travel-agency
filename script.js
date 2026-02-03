@@ -1,14 +1,10 @@
-// EBBRATO MASTER SCRIPT
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Preloader Logic
     const preloader = document.getElementById('preloader');
     if (preloader) {
         window.addEventListener('load', () => {
             preloader.style.opacity = '0';
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 800);
+            setTimeout(() => { preloader.style.display = 'none'; }, 800);
         });
     }
 
@@ -16,7 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         item.addEventListener('click', () => {
-            item.classList.toggle('active');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('i');
+            
+            answer.classList.toggle('hidden');
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
         });
     });
 });
