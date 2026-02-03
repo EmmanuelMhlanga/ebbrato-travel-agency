@@ -1,23 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Preloader Logic
+window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
-    if (preloader) {
-        window.addEventListener('load', () => {
-            preloader.style.opacity = '0';
-            setTimeout(() => { preloader.style.display = 'none'; }, 800);
-        });
-    }
+    setTimeout(() => {
+        preloader.style.opacity = '0';
+        setTimeout(() => preloader.style.display = 'none', 500);
+    }, 1000);
+});
 
-    // 2. FAQ Accordion Logic
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const answer = item.querySelector('.faq-answer');
-            const icon = item.querySelector('i');
-            
-            answer.classList.toggle('hidden');
-            icon.classList.toggle('fa-plus');
-            icon.classList.toggle('fa-minus');
+// Smooth Scroll for links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
 });
