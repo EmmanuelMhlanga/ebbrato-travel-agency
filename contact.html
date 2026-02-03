@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | EBBRATO TRAVEL AGENCY</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -25,36 +26,54 @@
     <div class="h-40"></div>
 
     <section class="py-10 px-6 max-w-5xl mx-auto mb-20">
-        <h2 class="text-6xl font-black text-center mb-16 uppercase italic">Let's <span class="gold-text">Connect</span></h2>
-        
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-10 p-8 text-center md:text-left">
-                <div>
-                    <h3 class="text-xs font-black gold-text uppercase tracking-[0.3em] mb-4">Direct Line</h3>
-                    <p class="text-3xl font-light">+27 60 959 2514</p>
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black uppercase italic italic">Connect <span class="gold-text">With Us</span></h2>
+            <p class="text-[10px] uppercase tracking-widest opacity-50 mt-4">Johannesburg HQ • Available Globally</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <div class="card-premium p-8 rounded-[30px]">
+                    <h3 class="text-xl font-black uppercase italic mb-6">Details</h3>
+                    <div class="space-y-4 text-[11px] uppercase tracking-widest">
+                        <p><i class="fas fa-envelope gold-text mr-4 w-5"></i> info@ebbrato.co.za</p>
+                        <p><i class="fas fa-phone gold-text mr-4 w-5"></i> +27 60 959 2514</p>
+                        <p><i class="fas fa-map-marker-alt gold-text mr-4 w-5"></i> Johannesburg, South Africa</p>
+                    </div>
                 </div>
-                <div class="flex justify-center md:justify-start space-x-6 pt-4">
-                    <a href="https://wa.me/27609592514" class="text-4xl hover:text-green-500 transition-all"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="text-4xl hover:text-pink-500 transition-all"><i class="fab fa-instagram"></i></a>
+                <div class="card-premium p-8 rounded-[30px] border-l-4 border-green-500">
+                    <h3 class="text-lg font-black uppercase italic mb-2">Instant Chat</h3>
+                    <p class="text-[10px] opacity-70 mb-4 uppercase">Direct line to our travel consultants</p>
+                    <a href="https://wa.me/27609592514" class="bg-green-600 text-white px-8 py-3 rounded-full text-[10px] font-black uppercase inline-block">WhatsApp Us</a>
                 </div>
             </div>
 
-            <div class="card-premium p-10 rounded-[40px]">
-                <form action="thank-you.html" method="POST" class="space-y-6">
-                    <input type="text" placeholder="FULL NAME" required class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 transition-all text-[10px] tracking-widest uppercase">
-                    <input type="email" placeholder="EMAIL ADDRESS" required class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 transition-all text-[10px] tracking-widest uppercase">
-                    <textarea placeholder="HOW CAN WE HELP?" rows="4" required class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 transition-all text-[10px] tracking-widest uppercase"></textarea>
-                    <button type="submit" class="w-full bg-white text-black font-black py-5 rounded-full uppercase text-[10px] tracking-[0.4em] hover:bg-yellow-600 transition-all active:scale-95">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+            <form class="card-premium p-10 rounded-[40px] space-y-6">
+                <div>
+                    <label class="text-[10px] uppercase font-black tracking-widest opacity-50 block mb-2">Full Name</label>
+                    <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-yellow-600">
+                </div>
+                <div>
+                    <label class="text-[10px] uppercase font-black tracking-widest opacity-50 block mb-2">Email Address</label>
+                    <input type="email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-yellow-600">
+                </div>
+                <div>
+                    <label class="text-[10px] uppercase font-black tracking-widest opacity-50 block mb-2">Desired Package</label>
+                    <select class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none text-black">
+                        <option>Cape Peninsula Luxury</option>
+                        <option>Kruger Safari Elite</option>
+                        <option>Drakensberg Mountains</option>
+                        <option>Custom Experience</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-white text-black py-4 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition">Send Inquiry</button>
+            </form>
         </div>
     </section>
 
-    <footer class="py-20 px-6 border-t border-white/10 bg-black/90">
+    <footer class="py-20 px-6 border-t border-white/10 bg-black/90 text-center md:text-left">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-center md:text-left">
+            <div>
                 <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
                 <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Soweto &bull; Beyond</p>
             </div>
@@ -65,10 +84,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50"><i class="fab fa-whatsapp"></i></a>
     <script src="script.js"></script>
 </body>
 </html>
