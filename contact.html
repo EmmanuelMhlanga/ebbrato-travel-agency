@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | EBBRATO</title>
-    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/earth-africa.svg">
+    <link rel="icon" type="image/svg+xml" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/earth-africa.svg">
     <script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="beach-theme text-white">
+<body class="beach-theme">
     <div id="preloader"><div class="loader-logo"></div></div>
-
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
-        <div class="text-xl font-black uppercase tracking-tighter">EBBRATO <span class="gold-text">TRAVEL</span></div>
+        <div class="text-xl font-black uppercase">EBBRATO <span class="gold-text">TRAVEL</span></div>
         <div class="hidden md:flex space-x-6 text-[9px] font-black uppercase tracking-widest">
             <a href="index.html">Home</a><a href="about.html">About</a><a href="packages.html">Tours</a><a href="experiences.html">Experiences</a><a href="fleet.html">Fleet</a><a href="gallery.html">Gallery</a><a href="contact.html" class="gold-text">Contact</a>
         </div>
     </nav>
-
     <div class="h-40"></div>
     <section class="max-w-4xl mx-auto px-6 mb-20">
-        <div class="card-premium p-12 rounded-[50px]">
-            <h2 class="text-4xl font-black uppercase text-center mb-10 italic">Start Your <span class="gold-text">Journey</span></h2>
+        <div class="card-premium p-10 rounded-[40px]">
             <form action="thank-you.html" class="space-y-6">
-                <input type="text" placeholder="FULL NAME" class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 uppercase text-[10px] tracking-widest">
-                <textarea placeholder="WHICH TOUR ARE YOU INTERESTED IN?" rows="4" class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 uppercase text-[10px] tracking-widest"></textarea>
-                <button class="w-full bg-white text-black font-black py-5 rounded-full uppercase text-[10px] tracking-[0.4em] hover:bg-yellow-600 transition">Request Itinerary</button>
+                <input type="text" placeholder="FULL NAME" required class="w-full bg-white/5 border-b border-white/20 p-4 focus:outline-none focus:border-yellow-600 uppercase text-[10px] tracking-widest text-white">
+                <div class="space-y-2">
+                    <label class="text-[9px] gold-text font-black uppercase tracking-widest">Select Destination</label>
+                    <select class="w-full bg-slate-900 border-b border-white/20 p-4 text-[10px] uppercase text-white">
+                        <option>Johannesburg & Soweto</option>
+                        <option>Cape Town Winelands</option>
+                        <option>Kruger Safari</option>
+                    </select>
+                </div>
+                <button class="w-full bg-white text-black font-black py-5 rounded-full uppercase text-[10px] tracking-widest">Request Itinerary</button>
             </form>
         </div>
     </section>
-
-    <footer class="py-20 px-6 border-t border-white/10 bg-black/90 text-center">
-        <p class="text-[10px] uppercase tracking-[0.3em] opacity-50 mb-4">Johannesburg • Soweto • Cape Town and Beyond</p>
+    <footer class="py-10 px-6 border-t border-white/10 bg-black/90 text-center">
+        <p class="text-[10px] uppercase tracking-[0.3em] opacity-50">Johannesburg • Soweto • Cape Town and Beyond</p>
     </footer>
     <script src="script.js"></script>
 </body>
