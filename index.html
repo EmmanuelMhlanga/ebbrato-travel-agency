@@ -1,77 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | EBBRATO TRAVEL AGENCY</title>
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBBRATO | Luxury Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="beach-theme text-white">
+<body class="bg-slate-950">
     <div id="preloader"><div class="loader-logo"></div></div>
-
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
-        <div class="text-xl font-black uppercase tracking-tighter">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></div>
-        <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
-            <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
-            <a href="about.html" class="gold-text">About</a>
-            <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
-            <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        <div class="text-xl font-black uppercase tracking-tighter">EBBRATO <span class="gold-text">TRAVEL</span></div>
+        <div class="hidden md:flex space-x-6 text-[9px] font-black uppercase tracking-widest">
+            <a href="index.html" class="gold-text">Home</a>
+            <a href="about.html" class="hover:text-yellow-500">About</a>
+            <a href="packages.html" class="hover:text-yellow-500">Tours</a>
+            <a href="experiences.html" class="hover:text-yellow-500">Experiences</a>
+            <a href="fleet.html" class="hover:text-yellow-500">Fleet</a>
+            <a href="gallery.html" class="hover:text-yellow-500">Gallery</a>
+            <a href="contact.html" class="hover:text-yellow-500">Contact</a>
         </div>
     </nav>
 
-    <div class="h-40"></div>
-
-    <section class="py-10 px-6 max-w-7xl mx-auto mb-20">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80" class="rounded-[60px] h-[500px] w-full object-cover shadow-2xl border border-white/10">
-            <div class="space-y-6">
-                <h2 class="text-6xl font-black uppercase italic tracking-tighter">Our <span class="gold-text">Mission</span></h2>
-                <p class="text-sm font-light leading-relaxed opacity-80">
-                    At EBBRATO, we bridge the gap between world-class luxury and the raw, vibrant history of South Africa. 
-                    Founded by Ebenezer and Lerato, we curate exclusive moments that stay with you forever.
-                </p>
-            </div>
+    <section class="h-screen flex items-center justify-center relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative text-center px-6">
+            <h1 class="text-7xl md:text-9xl font-black uppercase italic tracking-tighter">EXPLORE<br><span class="gold-text">MZANSI</span></h1>
+            <p class="mt-6 text-[10px] uppercase tracking-[0.5em] opacity-60">Elite Curated Experiences</p>
         </div>
     </section>
 
-    <section class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <h2 class="text-4xl font-black text-center mb-16 uppercase italic">The <span class="gold-text">Curators</span></h2>
-        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <div class="card-premium p-10 rounded-[40px] text-center group">
-                <div class="w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-2 border-yellow-600/30 p-1">
-                    <img src="ebenezer.jpg?v=2" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500">
-                </div>
-                <h3 class="text-xl font-black uppercase">Ebenezer Mhlanga</h3>
-                <p class="gold-text text-[10px] font-black uppercase tracking-widest mt-2">Travel Consultant</p>
-            </div>
-            <div class="card-premium p-10 rounded-[40px] text-center group">
-                <div class="w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-2 border-yellow-600/30 p-1">
-                    <img src="lerato.jpg?v=2" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500">
-                </div>
-                <h3 class="text-xl font-black uppercase">Lerato Ndlovu</h3>
-                <p class="gold-text text-[10px] font-black uppercase tracking-widest mt-2">Agency Specialist</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 px-6 border-t border-white/10 bg-black/90 text-center md:text-left">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
-                <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Soweto &bull; Beyond</p>
-            </div>
-            <div class="flex bg-white/5 rounded-full border border-white/10 p-1">
-                <input type="email" placeholder="NEWSLETTER" class="bg-transparent px-6 py-3 flex-grow text-[10px] focus:outline-none uppercase tracking-widest">
-                <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase hover:bg-yellow-600 transition">Join</button>
-            </div>
-        </div>
+    <footer class="py-20 px-6 border-t border-white/10 bg-black/90 text-center">
+        <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
+        <p class="text-[10px] uppercase tracking-[0.3em] opacity-50 mb-8">Johannesburg • Soweto • Capetown and beyond</p>
+        <p class="text-[8px] opacity-20 uppercase tracking-widest">&copy; 2026 Gasa Tech</p>
     </footer>
 
-    <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/27609592514" class="whatsapp-float bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl"><i class="fab fa-whatsapp"></i></a>
     <script src="script.js"></script>
 </body>
 </html>
