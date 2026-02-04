@@ -3,30 +3,47 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | EBBRATO</title>
-    <link rel="icon" type="image/svg+xml" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/earth-africa.svg">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2099/2099161.png">
     <script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="style.css">
 </head>
-<body class="beach-theme">
+<body class="beach-theme text-white">
     <div id="preloader"><div class="loader-logo"></div></div>
-    <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
-        <div class="text-xl font-black uppercase">EBBRATO <span class="gold-text">TRAVEL</span></div>
+
+    <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md">
+        <div class="flex items-center text-xl font-black uppercase">
+            <img src="https://cdn-icons-png.flaticon.com/512/2099/2099161.png" class="w-6 mr-2"> EBBRATO
+        </div>
         <div class="hidden md:flex space-x-6 text-[9px] font-black uppercase tracking-widest">
             <a href="index.html">Home</a><a href="about.html">About</a><a href="packages.html">Tours</a><a href="experiences.html">Experiences</a><a href="fleet.html">Fleet</a><a href="gallery.html" class="gold-text">Gallery</a><a href="contact.html">Contact</a>
         </div>
     </nav>
-    <div class="h-40"></div>
+
+    <div class="h-44"></div>
     <section class="max-w-7xl mx-auto px-6 mb-20">
-        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            <div class="card-premium rounded-[30px] overflow-hidden group relative">
-                <img src="joburg-tour.png" class="w-full">
-                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p class="text-[9px] font-black uppercase">Soul of Soweto</p>
+        <div class="columns-1 md:columns-3 gap-6 space-y-6">
+            <div class="card-premium rounded-3xl overflow-hidden group relative">
+                <img src="joburg-tour.png" class="w-full grayscale group-hover:grayscale-0 transition-all">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/60 backdrop-blur-md">
+                    <p class="text-[9px] font-black uppercase tracking-widest">The Soul of Soweto</p>
+                </div>
+            </div>
+            <div class="card-premium rounded-3xl overflow-hidden group relative">
+                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=600" class="w-full grayscale group-hover:grayscale-0 transition-all">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/60 backdrop-blur-md">
+                    <p class="text-[9px] font-black uppercase tracking-widest">Majestic Safaris</p>
+                </div>
+            </div>
+            <div class="card-premium rounded-3xl overflow-hidden group relative">
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600" class="w-full grayscale group-hover:grayscale-0 transition-all">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/60 backdrop-blur-md">
+                    <p class="text-[9px] font-black uppercase tracking-widest">Wineland Estates</p>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="py-10 px-6 border-t border-white/10 bg-black/90 text-center">
-        <p class="text-[10px] uppercase tracking-[0.3em] opacity-50">Johannesburg • Soweto • Cape Town and Beyond</p>
+
+    <footer class="py-10 text-center uppercase tracking-[0.3em] text-[10px] opacity-60">
+        Johannesburg • Soweto • Cape Town and Beyond
     </footer>
     <script src="script.js"></script>
 </body>
