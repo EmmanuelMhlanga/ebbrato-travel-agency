@@ -8,6 +8,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .ui-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .ui-float-delayed {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+    </style>
 </head>
 <body class="beach-theme text-white flex flex-col min-h-screen">
     <div id="preloader"><div class="loader-logo"></div></div>
@@ -19,6 +33,7 @@
             <a href="about.html" class="hover:text-yellow-500 transition">About</a>
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
             <a href="experiences.html" class="gold-text">Experiences</a>
+            <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
             <a href="contact.html" class="hover:text-yellow-500 transition">Contact</a>
         </div>
@@ -29,7 +44,7 @@
     <main class="flex-grow">
         <section class="py-20 px-6 max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
+                <div class="ui-float rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
                 </div>
                 <div class="space-y-6">
@@ -49,7 +64,7 @@
                         Witness the majesty of the Big Five from the comfort of a 5-star villa. Private game drives and starlit boma dinners await.
                     </p>
                 </div>
-                <div class="order-1 md:order-2 rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
+                <div class="ui-float-delayed order-1 md:order-2 rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
                     <img src="https://images.unsplash.com/photo-1547448415-e9f5b28e570d?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
                 </div>
             </div>
@@ -57,13 +72,13 @@
 
         <section class="py-20 px-6 max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1571493062002-9118c7e096f9?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                <div class="ui-float rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
                 </div>
                 <div class="space-y-6">
-                    <h3 class="text-5xl font-black uppercase italic italic">Soweto <span class="gold-text">Soul</span></h3>
+                    <h3 class="text-5xl font-black uppercase italic italic">Estate <span class="gold-text">Life</span></h3>
                     <p class="text-sm font-light leading-relaxed opacity-70 uppercase tracking-wide">
-                        Vibrant streets and historic stories. Experience the heart of Johannesburg through the eyes of the people who shaped it.
+                        Savor world-class vintages in historic valleys. Private tastings and farm-to-table dining overlooking centuries-old vineyards.
                     </p>
                 </div>
             </div>
@@ -72,46 +87,37 @@
         <section class="py-20 px-6 max-w-7xl mx-auto bg-white/5 rounded-[100px]">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1 space-y-6 text-right">
-                    <h3 class="text-5xl font-black uppercase italic italic">Estate <span class="gold-text">Life</span></h3>
-                    <p class="text-sm font-light leading-relaxed opacity-70 uppercase tracking-wide">
-                        Savor world-class vintages in historic valleys. Private tastings and farm-to-table dining overlooking centuries-old vineyards.
-                    </p>
-                </div>
-                <div class="order-1 md:order-2 rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-6 max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-6">
                     <h3 class="text-5xl font-black uppercase italic italic">Berg <span class="gold-text">Majesty</span></h3>
                     <p class="text-sm font-light leading-relaxed opacity-70 uppercase tracking-wide">
                         Reach the clouds in the Drakensberg. Grandeur and silence found only at the highest peaks of the nation.
                     </p>
                 </div>
+                <div class="ui-float-delayed order-1 md:order-2 rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-20 px-6 border-t border-white/10 bg-black/90 text-center md:text-left mt-auto">
+    <footer class="py-20 px-6 border-t border-white/10 bg-black/95 text-center md:text-left mt-auto">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
-                <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Soweto &bull; Beyond</p>
+                <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Cape Town &bull; Soweto &bull; Beyond</p>
             </div>
             <div class="flex bg-white/5 rounded-full border border-white/10 p-1">
                 <input type="email" placeholder="NEWSLETTER" class="bg-transparent px-6 py-3 flex-grow text-[10px] focus:outline-none uppercase tracking-widest">
                 <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase hover:bg-yellow-600 transition">Join</button>
             </div>
         </div>
+        
+        <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="opacity-20 text-[8px] tracking-[0.5em] uppercase">© 2026 Ebbrato Travel Agency</p>
+            <p class="text-[9px] font-black uppercase tracking-widest opacity-40">Designed by <span class="gold-text">GASA TECH</span></p>
+        </div>
     </footer>
 
-    <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50">
+    <a href="https://wa.me/27842757507" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50 shadow-2xl hover:scale-110 transition duration-300">
         <i class="fab fa-whatsapp"></i>
     </a>
 
