@@ -19,6 +19,7 @@
             <a href="index.html" class="gold-text">Home</a>
             <a href="about.html" class="hover:text-yellow-500 transition">About</a>
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
+            <a href="experiences.html" class="hover:text-yellow-500 transition">Experiences</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
             <a href="contact.html" class="hover:text-yellow-500 transition">Contact</a>
         </div>
@@ -28,15 +29,18 @@
         <section class="h-screen flex items-center justify-center text-center px-6 relative overflow-hidden">
             <div class="z-10">
                 <h1 class="text-7xl md:text-9xl font-black uppercase italic tracking-tighter mb-4">Mzansi <span class="gold-text">Elite</span></h1>
-                <p class="text-[10px] tracking-[0.5em] uppercase opacity-50 mb-12">Johannesburg • Cape Town • Kruger</p>
-                <a href="packages.html" class="bg-white text-black px-12 py-4 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition">Explore Tours</a>
+                <p class="text-[10px] tracking-[0.5em] uppercase opacity-60 mb-12">Johannesburg • Cape Town • Soweto • Beyond</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <a href="packages.html" class="bg-white text-black px-12 py-4 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition duration-300">Explore Tours</a>
+                    <a href="experiences.html" class="border border-white/20 px-12 py-4 rounded-full font-black uppercase text-[10px] hover:bg-white hover:text-black transition duration-300">Our Experiences</a>
+                </div>
             </div>
             
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black -z-10"></div>
         </section>
     </main>
 
-    <footer class="py-20 px-6 border-t border-white/10 bg-black/90 text-center md:text-left mt-auto">
+    <footer class="py-20 px-6 border-t border-white/10 bg-black/95 text-center md:text-left mt-auto">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
@@ -47,12 +51,14 @@
                 <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase hover:bg-yellow-600 transition">Join</button>
             </div>
         </div>
-        <div class="mt-10 text-center opacity-20 text-[8px] tracking-[0.5em] uppercase">
-            © 2026 Ebbrato Travel Agency. All Rights Reserved.
+        
+        <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="opacity-20 text-[8px] tracking-[0.5em] uppercase">© 2026 Ebbrato Travel Agency</p>
+            <p class="text-[9px] font-black uppercase tracking-widest opacity-40">Designed by <span class="gold-text">GASA TECH</span></p>
         </div>
     </footer>
 
-    <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50">
+    <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50 shadow-2xl hover:scale-110 transition duration-300">
         <i class="fab fa-whatsapp"></i>
     </a>
 
