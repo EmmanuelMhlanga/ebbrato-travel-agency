@@ -8,6 +8,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Ensuring the grid items have a premium feel */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-item:hover .gallery-img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body class="beach-theme text-white flex flex-col min-h-screen">
     <div id="preloader"><div class="loader-logo"></div></div>
@@ -27,47 +47,54 @@
 
     <div class="h-40"></div>
     
-    <main class="flex-grow mb-20">
-        <section class="px-6 max-w-7xl mx-auto">
+    <main class="flex-grow mb-20 px-6">
+        <section class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-black uppercase italic tracking-tighter">Visual <span class="gold-text">Gallery</span></h2>
-                <p class="text-[10px] tracking-[0.4em] opacity-50 mt-4 uppercase">Capturing the Essence of Mzansi</p>
+                <p class="text-[10px] tracking-[0.4em] opacity-50 mt-4 uppercase">Johannesburg • Cape Town • Soweto • Beyond</p>
             </div>
             
-            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="card-premium rounded-3xl overflow-hidden group relative">
-                    <img src="https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=800&q=80" class="w-full grayscale group-hover:grayscale-0 transition duration-700">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                <div class="gallery-item aspect-square">
+                    <img src="https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=800&q=80" class="gallery-img">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
                         <h3 class="text-xl font-black uppercase italic gold-text">Table Mountain</h3>
                     </div>
                 </div>
 
-                <div class="card-premium rounded-3xl overflow-hidden group relative">
-                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" class="w-full grayscale group-hover:grayscale-0 transition duration-700">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                <div class="gallery-item aspect-square">
+                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" class="gallery-img">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
                         <h3 class="text-xl font-black uppercase italic gold-text">The Big Five</h3>
                     </div>
                 </div>
 
-                <div class="card-premium rounded-3xl overflow-hidden group relative">
-                    <img src="https://images.unsplash.com/photo-1575328630189-440449ed8cd1?auto=format&fit=crop&w=800&q=80" class="w-full grayscale group-hover:grayscale-0 transition duration-700">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                <div class="gallery-item aspect-square">
+                    <img src="https://images.unsplash.com/photo-1575328630189-440449ed8cd1?auto=format&fit=crop&w=800&q=80" class="gallery-img">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
                         <h3 class="text-xl font-black uppercase italic gold-text">Cape Point</h3>
                     </div>
                 </div>
 
-                <div class="card-premium rounded-3xl overflow-hidden group relative">
-                    <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=800&q=80" class="w-full grayscale group-hover:grayscale-0 transition duration-700">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                        <h3 class="text-xl font-black uppercase italic gold-text">Camps Bay Luxury</h3>
+                <div class="gallery-item aspect-square">
+                    <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=800&q=80" class="gallery-img">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <h3 class="text-xl font-black uppercase italic gold-text">Camps Bay</h3>
                     </div>
                 </div>
 
-                <div class="card-premium rounded-3xl overflow-hidden group relative">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" class="w-full grayscale group-hover:grayscale-0 transition duration-700">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                <div class="gallery-item aspect-square lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" class="gallery-img">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
                         <h3 class="text-xl font-black uppercase italic gold-text">Wild Safari</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item aspect-square">
+                    <img src="https://images.unsplash.com/photo-1571493062002-9118c7e096f9?auto=format&fit=crop&w=800&q=80" class="gallery-img">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <h3 class="text-xl font-black uppercase italic gold-text">Soweto Soul</h3>
                     </div>
                 </div>
 
