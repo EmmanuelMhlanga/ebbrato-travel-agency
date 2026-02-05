@@ -8,6 +8,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .ui-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .ui-float-delayed {
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+    </style>
 </head>
 <body class="beach-theme text-white flex flex-col min-h-screen">
     <div id="preloader"><div class="loader-logo"></div></div>
@@ -25,33 +39,42 @@
         </div>
     </nav>
 
-    <div class="h-40"></div>
+    <div class="h-32"></div>
 
-    <main class="flex-grow mb-20">
-        <section class="px-6 max-w-4xl mx-auto text-center mb-24">
-            <h2 class="text-5xl font-black uppercase italic tracking-tighter mb-8">Our <span class="gold-text">Mission</span></h2>
-            <p class="text-lg font-light leading-relaxed opacity-80 uppercase tracking-wide">
-                To redefine South African travel by providing elite, soul-stirring experiences that bridge the gap between luxury and heritage. We don't just show you the destination; we immerse you in the heartbeat of the nation.
+    <main class="flex-grow">
+        <section class="px-6 max-w-5xl mx-auto text-center py-12">
+            <h2 class="text-xs font-black uppercase tracking-[0.5em] gold-text mb-4">Our Mission</h2>
+            <h3 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
+                Redefining the Soul of <br> <span class="text-white">African Luxury</span>
+            </h3>
+            <p class="text-xs md:text-sm font-light leading-relaxed opacity-60 uppercase tracking-widest max-w-2xl mx-auto">
+                Redefining South African travel through elite experiences that bridge the gap between world-class luxury and deep-rooted heritage.
             </p>
         </section>
 
-        <section class="px-6 max-w-6xl mx-auto mb-24">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="text-center group">
-                    <div class="rounded-[50px] overflow-hidden border border-white/10 mb-6 grayscale group-hover:grayscale-0 transition duration-700 aspect-square">
+        <section class="px-6 max-w-4xl mx-auto pb-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <div class="flex flex-col items-center">
+                    <div class="ui-float w-64 h-80 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-white/5 mb-6">
                         <img src="ebenezer.jpg" alt="Ebenezer" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-3xl font-black uppercase italic gold-text">Ebenezer</h3>
-                    <p class="text-[10px] tracking-[0.4em] opacity-50 uppercase mt-2">Founder & Creative Director</p>
+                    <div class="text-center">
+                        <h4 class="text-2xl font-black uppercase italic gold-text">Ebenezer</h4>
+                        <p class="text-[9px] tracking-[0.3em] uppercase opacity-40 mt-1">Travel Consultant</p>
+                    </div>
                 </div>
 
-                <div class="text-center group">
-                    <div class="rounded-[50px] overflow-hidden border border-white/10 mb-6 grayscale group-hover:grayscale-0 transition duration-700 aspect-square">
+                <div class="flex flex-col items-center">
+                    <div class="ui-float-delayed w-64 h-80 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-white/5 mb-6">
                         <img src="lerato.jpg" alt="Lerato" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-3xl font-black uppercase italic gold-text">Lerato</h3>
-                    <p class="text-[10px] tracking-[0.4em] opacity-50 uppercase mt-2">Executive Experience Designer</p>
+                    <div class="text-center">
+                        <h4 class="text-2xl font-black uppercase italic gold-text">Lerato</h4>
+                        <p class="text-[9px] tracking-[0.3em] uppercase opacity-40 mt-1">Travel Agent</p>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -62,7 +85,7 @@
                 <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
                 <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Soweto &bull; Beyond</p>
             </div>
-            <div class="flex bg-white/5 rounded-full border border-white/10 p-1">
+            <div class="flex bg-white/5 rounded-full border border-white/10 p-1 max-w-md">
                 <input type="email" placeholder="NEWSLETTER" class="bg-transparent px-6 py-3 flex-grow text-[10px] focus:outline-none uppercase tracking-widest">
                 <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase hover:bg-yellow-600 transition">Join</button>
             </div>
