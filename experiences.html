@@ -3,32 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiences | EBBRATO TRAVEL AGENCY</title>
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <title>Experiences | EBBRATO TRAVEL</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        .ui-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        .ui-float-delayed {
-            animation: float 6s ease-in-out infinite;
-            animation-delay: 3s;
-        }
-    </style>
 </head>
 <body class="beach-theme text-white flex flex-col min-h-screen">
-    <div id="preloader"><div class="loader-logo"></div></div>
+
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center">
+        <img src="favicon.png" class="w-20 mb-6 animate-pulse" alt="Ebbrato Loading">
+        <div class="loader-logo border-3 border-yellow-600 border-t-transparent rounded-full w-12 h-12 animate-spin"></div>
+    </div>
 
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
-        <div class="text-xl font-black uppercase tracking-tighter">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></div>
-        <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
+        <div class="flex items-center text-xl font-black uppercase tracking-tighter">
+            <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3 object-contain filter brightness-110">
+            <span>EBBRATO <span class="gold-text">TRAVEL</span></span>
+        </div>
+        
+        <div class="hidden md:flex space-x-6 text-[9px] font-black uppercase tracking-widest">
             <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
             <a href="about.html" class="hover:text-yellow-500 transition">About</a>
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
@@ -39,85 +35,47 @@
         </div>
     </nav>
 
-    <div class="h-40"></div>
+    <main class="flex-grow pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <header class="text-center mb-20">
+                <h1 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-4">
+                    Curated <span class="gold-text">Experiences</span>
+                </h1>
+                <p class="text-[10px] uppercase tracking-[0.5em] opacity-60">Elevating the Art of Travel</p>
+            </header>
 
-    <main class="flex-grow">
-        <section class="py-20 px-6 max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="ui-float rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="group relative overflow-hidden rounded-[50px] h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Private Chauffeur">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-all duration-500"></div>
+                    <div class="absolute inset-0 flex flex-col justify-center items-center p-12 text-center">
+                        <h3 class="text-3xl font-black uppercase italic mb-4">Luxury Chauffeur</h3>
+                        <p class="text-[10px] uppercase tracking-widest opacity-80 leading-loose">Premium door-to-door service with professional guides who know the heartbeat of the city.</p>
+                    </div>
                 </div>
-                <div class="space-y-6">
-                    <h3 class="text-5xl font-black uppercase italic italic">Pure <span class="gold-text">Serenity</span></h3>
-                    <p class="text-sm font-light leading-relaxed opacity-70 uppercase tracking-wide">
-                        Experience the untouchable beauty of South Africa’s coastline. From sunrise over the Indian Ocean to sunset in the Atlantic, we curate the peace you deserve.
-                    </p>
+
+                <div class="group relative overflow-hidden rounded-[50px] h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Heritage Tours">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-all duration-500"></div>
+                    <div class="absolute inset-0 flex flex-col justify-center items-center p-12 text-center">
+                        <h3 class="text-3xl font-black uppercase italic mb-4">Heritage & Soul</h3>
+                        <p class="text-[10px] uppercase tracking-widest opacity-80 leading-loose">Deep dives into South African history, from the streets of Soweto to the monuments of Pretoria.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section class="py-20 px-6 max-w-7xl mx-auto bg-white/5 rounded-[100px]">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1 space-y-6 text-right">
-                    <h3 class="text-5xl font-black uppercase italic italic">Wild <span class="gold-text">Elegance</span></h3>
-                    <p class="text-sm font-light leading-relaxed opacity-70 uppercase tracking-wide">
-                        Witness the majesty of the Big Five from the comfort of a 5-star villa. Private game drives and starlit boma dinners await.
-                    </p>
-                </div>
-                <div class="ui-float-delayed order-1 md:order-2 rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1547448415-e9f5b28e570d?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-6 max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="ui-float rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-6">
-                    <h3 class="text-5xl font-black uppercase italic italic">Estate <span class="gold-text">Life</span></h3>
-                    <p class="text-sm font-light leading-relaxed opacity-70 uppercase tracking-wide">
-                        Savor world-class vintages in historic valleys. Private tastings and farm-to-table dining overlooking centuries-old vineyards.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-6 max-w-7xl mx-auto bg-white/5 rounded-[100px]">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1 space-y-6 text-right">
-                    <h3 class="text-5xl font-black uppercase italic italic">Berg <span class="gold-text">Majesty</span></h3>
-                    <p class="text-sm font-light leading-relaxed opacity-70 uppercase tracking-wide">
-                        Reach the clouds in the Drakensberg. Grandeur and silence found only at the highest peaks of the nation.
-                    </p>
-                </div>
-                <div class="ui-float-delayed order-1 md:order-2 rounded-[60px] overflow-hidden border border-white/10 shadow-2xl h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="py-20 px-6 border-t border-white/10 bg-black/95 text-center md:text-left mt-auto">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h4 class="font-black uppercase mb-4 tracking-widest">EBBRATO <span class="gold-text">TRAVEL AGENCY</span></h4>
-                <p class="text-[9px] uppercase tracking-[0.4em] opacity-30">Johannesburg &bull; Cape Town &bull; Soweto &bull; Beyond</p>
-            </div>
-            <div class="flex bg-white/5 rounded-full border border-white/10 p-1">
-                <input type="email" placeholder="NEWSLETTER" class="bg-transparent px-6 py-3 flex-grow text-[10px] focus:outline-none uppercase tracking-widest">
-                <button class="bg-white text-black px-8 rounded-full font-black text-[10px] uppercase hover:bg-yellow-600 transition">Join</button>
-            </div>
-        </div>
-        
-        <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="opacity-20 text-[8px] tracking-[0.5em] uppercase">© 2026 Ebbrato Travel Agency</p>
-            <p class="text-[9px] font-black uppercase tracking-widest opacity-40">Designed by <span class="gold-text">GASA TECH</span></p>
-        </div>
+    <footer class="py-16 bg-black border-t border-white/10 text-center w-full mt-auto">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
+            Johannesburg • Soweto • Cape Town and Beyond
+        </p>
+        <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
+            &copy; 2026 EBBRATO TRAVEL AGENCY • BY GASA TECH
+        </p>
     </footer>
 
-    <a href="https://wa.me/27842757507" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50 shadow-2xl hover:scale-110 transition duration-300">
+    <a href="https://wa.me/27609592514" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
         <i class="fab fa-whatsapp"></i>
     </a>
 
