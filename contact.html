@@ -3,97 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | EBBRATO TRAVEL</title>
+    <title>Contact Us | EBBRATO TRAVEL</title>
     <link rel="icon" type="image/png" href="favicon.png?v=2">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body class="beach-theme text-white flex flex-col min-h-screen">
-    
-    <div id="preloader" class="fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center">
-        <img src="favicon.png" class="w-20 mb-6 animate-pulse" alt="Ebbrato Loading">
-        <div class="loader-logo border-3 border-yellow-600 border-t-transparent rounded-full w-12 h-12 animate-spin"></div>
-    </div>
+    <style>
+        /* Animated Water Background Effect */
+        .bg-animated-water {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            animation: waterMove 20s infinite alternate ease-in-out;
+        }
 
+        @keyframes waterMove {
+            0% { transform: scale(1.0); background-position: center; }
+            100% { transform: scale(1.1); background-position: bottom; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        input, select, textarea {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #eab308 !important; /* Gold color */
+            outline: none;
+            box-shadow: 0 0 15px rgba(234, 179, 8, 0.2);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(45deg, #eab308, #fef08a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
+
+    <div class="bg-animated-water"></div>
+    
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
         <div class="flex items-center text-xl font-black uppercase tracking-tighter">
-            <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3 object-contain filter brightness-110">
-            <span>EBBRATO <span class="gold-text">TRAVEL</span></span>
+            <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3">
+            <span>EBBRATO <span class="gold-text text-yellow-500">TRAVEL</span></span>
         </div>
-        
         <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
             <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
             <a href="about.html" class="hover:text-yellow-500 transition">About</a>
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
-            <a href="experiences.html" class="hover:text-yellow-500 transition">Experiences</a>
             <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="gold-text">Contact</a>
+            <a href="contact.html" class="text-yellow-500 border-l border-white/20 pl-8 font-black">Contact</a>
         </div>
     </nav>
 
-    <div class="h-40"></div>
+    <div class="h-32"></div>
 
-    <main class="flex-grow mb-20">
-        <section class="py-10 px-6 max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black uppercase italic tracking-tighter">Connect <span class="gold-text">With Us</span></h2>
-                <p class="text-[10px] uppercase tracking-widest opacity-50 mt-4">Johannesburg &bull; Soweto &bull; Cape Town &bull; Available Globally</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12">
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                
                 <div class="space-y-8">
-                    <div class="card-premium p-10 rounded-[40px] border border-white/5 bg-slate-900/40">
-                        <h3 class="text-xl font-black uppercase italic mb-8">Details</h3>
-                        <div class="space-y-6 text-[11px] uppercase tracking-widest">
-                            <p class="flex items-center"><i class="fas fa-envelope gold-text mr-4 text-lg"></i> info@ebbrato.co.za</p>
-                            <p class="flex items-center"><i class="fas fa-phone gold-text mr-4 text-lg"></i> +27 60 959 2514</p>
-                            <p class="flex items-center"><i class="fas fa-map-marker-alt gold-text mr-4 text-lg"></i> Johannesburg & Cape Town</p>
-                        </div>
+                    <div>
+                        <h1 class="text-6xl font-black uppercase italic tracking-tighter mb-4">Get In <span class="gold-gradient-text">Touch</span></h1>
+                        <p class="text-gray-400 font-medium leading-relaxed uppercase text-[12px] tracking-widest">
+                            Ready for your next South African adventure? Reach out to our concierge team.
+                        </p>
                     </div>
-                    
-                    <div class="card-premium p-10 rounded-[40px] border-l-4 border-green-500 bg-green-500/5">
-                        <h3 class="text-lg font-black uppercase italic mb-2">Instant Chat</h3>
-                        <p class="text-[10px] opacity-70 mb-6 uppercase tracking-tight">Direct line to our travel consultants</p>
-                        <a href="https://wa.me/27609592514" class="inline-block bg-green-600 text-white px-10 py-4 rounded-full text-[10px] font-black uppercase hover:bg-green-700 transition shadow-lg">WhatsApp Us</a>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 group">
+                            <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-yellow-500 group-hover:bg-yellow-500 group-hover:text-black transition duration-500">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-gray-500">Phone & WhatsApp</p>
+                                <p class="text-lg font-bold">+27 63 993 8057</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 group">
+                            <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-yellow-500 group-hover:bg-yellow-500 group-hover:text-black transition duration-500">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-gray-500">Email Us</p>
+                                <p class="text-lg font-bold">info@ebbratotravel.co.za</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <form class="card-premium p-10 rounded-[40px] border border-white/5 bg-slate-900/40 space-y-6">
-                    <div>
-                        <label class="text-[9px] uppercase font-black tracking-[0.2em] opacity-40 block mb-2">Full Name</label>
-                        <input type="text" placeholder="YOUR NAME" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-xs focus:outline-none focus:border-yellow-600 transition uppercase">
-                    </div>
-                    <div>
-                        <label class="text-[9px] uppercase font-black tracking-[0.2em] opacity-40 block mb-2">Email Address</label>
-                        <input type="email" placeholder="EMAIL@EXAMPLE.COM" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-xs focus:outline-none focus:border-yellow-600 transition uppercase">
-                    </div>
-                    <div>
-                        <label class="text-[9px] uppercase font-black tracking-[0.2em] opacity-40 block mb-2">Message</label>
-                        <textarea rows="4" placeholder="HOW CAN WE HELP YOU?" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-xs focus:outline-none focus:border-yellow-600 transition uppercase"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-white text-black py-5 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition shadow-xl">Send Message</button>
-                </form>
+                <div class="glass-card p-8 md:p-12 rounded-[40px] shadow-2xl">
+                    <form action="#" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest font-black mb-2 block text-yellow-500">Full Name</label>
+                                <input type="text" placeholder="Lerato Moloi" class="w-full p-4 rounded-2xl">
+                            </div>
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest font-black mb-2 block text-yellow-500">Email Address</label>
+                                <input type="email" placeholder="example@gmail.com" class="w-full p-4 rounded-2xl">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest font-black mb-2 block text-yellow-500">Select Your Destination</label>
+                            <select class="w-full p-4 rounded-2xl appearance-none cursor-pointer">
+                                <option value="" disabled selected>Select a Tour...</option>
+                                <option value="gold-city">The Gold City (Johannesburg)</option>
+                                <option value="mother-city">The Mother City (Cape Town)</option>
+                                <option value="wild-mzansi">Wild Mzansi (Kruger Safari)</option>
+                                <option value="panorama">Panorama Route</option>
+                                <option value="durban">Durban Coast</option>
+                                <option value="cradle">Cradle Heritage</option>
+                                <option value="other">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest font-black mb-2 block text-yellow-500">Your Message</label>
+                            <textarea rows="4" placeholder="Tell us more about your travel plans..." class="w-full p-4 rounded-2xl"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-yellow-500 hover:bg-white text-black font-black uppercase tracking-widest py-5 rounded-2xl transition duration-500 transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="py-16 bg-black border-t border-white/10 text-center w-full mt-auto">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
-                Johannesburg • Soweto • Cape Town and Beyond
-            </p>
-            <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
-                &copy; 2026 EBBRATO TRAVEL • BY GASA TECH
-            </p>
-        </div>
+    <footer class="py-12 bg-black/50 backdrop-blur-md text-center border-t border-white/5">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/50 italic">EBBRATO TRAVEL • EST 2026 • LUXURY IN MOTION</p>
     </footer>
 
-    <a href="https://wa.me/27609592514" class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50 shadow-2xl hover:scale-110 transition duration-300">
+    <a href="https://wa.me/27639938057" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition duration-300">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="script.js"></script>
 </body>
 </html>
