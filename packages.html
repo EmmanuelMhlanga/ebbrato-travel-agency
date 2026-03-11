@@ -9,18 +9,23 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* The Grey-to-Color Effect */
         .tour-image {
             filter: grayscale(100%);
             opacity: 0.9;
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
         .group:hover .tour-image {
             filter: grayscale(0%);
             opacity: 1;
             transform: scale(1.1);
         }
-        .card-bg-fallback { background-color: #0f172a; }
+        .card-container {
+            background-color: #1a1a1a; /* Dark fallback so it never looks 'white' */
+        }
     </style>
 </head>
 <body class="beach-theme text-white flex flex-col min-h-screen bg-slate-950">
@@ -52,8 +57,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-bg-fallback border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1577948000111-9c97cdeb20b8?auto=format&fit=crop&w=800&q=80" class="tour-image absolute inset-0 w-full h-full" alt="Johannesburg Skyline">
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-container border border-white/10 shadow-2xl">
+                    <img src="https://images.pexels.com/photos/10139604/pexels-photo-10139604.jpeg?auto=compress&cs=tinysrgb&w=800" class="tour-image absolute inset-0" alt="Joburg">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Gold City</h3>
                         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">JOHANNESBURG & SOWETO • Deep dive into the heart of South African history.</p>
@@ -61,8 +66,8 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-bg-fallback border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=80" class="tour-image absolute inset-0 w-full h-full" alt="Cape Town">
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-container border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=80&w=800" class="tour-image absolute inset-0" alt="Cape Town">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Mother City</h3>
                         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">CAPE TOWN • Table Mountain and coastal luxury at its finest.</p>
@@ -70,8 +75,8 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-bg-fallback border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" class="tour-image absolute inset-0 w-full h-full" alt="Safari">
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-container border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800" class="tour-image absolute inset-0" alt="Safari">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Wild Mzansi</h3>
                         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">KRUGER PARK • The ultimate Big Five safari experience.</p>
@@ -79,8 +84,8 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-bg-fallback border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1627464111364-5830058e7751?auto=format&fit=crop&w=800&q=80" class="tour-image absolute inset-0 w-full h-full" alt="Blyde River Canyon">
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-container border border-white/10 shadow-2xl">
+                    <img src="https://images.pexels.com/photos/2105104/pexels-photo-2105104.jpeg?auto=compress&cs=tinysrgb&w=800" class="tour-image absolute inset-0" alt="Blyde River">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Panorama Route</h3>
                         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">MPUMALANGA • God's Window and stunning waterfall vistas.</p>
@@ -88,8 +93,8 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-bg-fallback border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1571506502421-152269c37021?auto=format&fit=crop&w=800&q=80" class="tour-image absolute inset-0 w-full h-full" alt="Durban Beach">
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-container border border-white/10 shadow-2xl">
+                    <img src="https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=800" class="tour-image absolute inset-0" alt="Durban">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Durban Coast</h3>
                         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">WARM INDIAN OCEAN • Sun, sea, and rich Zulu culture.</p>
@@ -97,8 +102,8 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-bg-fallback border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" class="tour-image absolute inset-0 w-full h-full" alt="Cradle Caves">
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] card-container border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800" class="tour-image absolute inset-0" alt="Cradle Caves">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Cradle Heritage</h3>
                         <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">HUMANKIND ORIGINS • Exploring world heritage archaeological sites.</p>
