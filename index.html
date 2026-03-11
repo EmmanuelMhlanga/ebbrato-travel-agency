@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EBBRATO | Your Guide To Travel and Adventure</title>
-    
     <link rel="icon" type="image/png" href="favicon.png">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="beach-theme text-white">
+<body class="beach-theme text-white flex flex-col min-h-screen">
 
     <div id="preloader" class="fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center">
         <img src="favicon.png" class="w-20 mb-6 animate-pulse" alt="Ebbrato Loading">
@@ -25,21 +23,21 @@
         </div>
         <div class="hidden md:flex space-x-6 text-[9px] font-black uppercase tracking-widest">
             <a href="index.html" class="gold-text">Home</a>
-            <a href="about.html" class="hover:text-yellow-500 transition">About</a>
-            <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
-            <a href="experiences.html" class="hover:text-yellow-500 transition">Experiences</a>
-            <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
-            <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="hover:text-yellow-500 transition">Contact</a>
+            <a href="about.html">About</a>
+            <a href="packages.html">Tours</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
-    <section class="h-screen flex items-center justify-center text-center px-6">
+    <main class="flex-grow flex items-center justify-center text-center px-6 pt-32 pb-20">
         <div class="max-w-5xl">
-            <h1 class="text-6xl md:text-8xl font-black uppercase italic tracking-tighter mb-4">
+            <h1 class="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-4 leading-none">
                 Your Guide To<br><span class="gold-text">Travel and Adventure</span>
             </h1>
-            <p class="text-[10px] uppercase tracking-[0.6em] opacity-60">Curated Chauffeurs & Private Heritage Tours</p>
+            <p class="text-[10px] uppercase tracking-[0.6em] opacity-60 mt-6">Curated Chauffeurs & Private Heritage Tours</p>
             
             <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
                 <a href="packages.html" class="border border-white/20 px-10 py-4 rounded-full text-[9px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
@@ -50,9 +48,9 @@
                 </a>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer class="py-20 bg-black/90 border-t border-white/10 text-center">
+    <footer class="py-16 bg-black/90 border-t border-white/10 text-center w-full">
         <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
             Johannesburg • Soweto • Cape Town and Beyond
         </p>
@@ -61,7 +59,7 @@
         </p>
     </footer>
 
-    <a href="https://wa.me/27609592514" target="_blank" class="whatsapp-float bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl transition-transform hover:scale-110">
+    <a href="https://wa.me/27609592514" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
         <i class="fab fa-whatsapp"></i>
     </a>
 
