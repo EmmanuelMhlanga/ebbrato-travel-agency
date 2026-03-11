@@ -13,16 +13,21 @@
             filter: grayscale(100%);
             opacity: 0.9;
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            object-fit: cover;
+            /* Changed to contain or better centered cover to prevent extreme zoom */
+            object-fit: cover; 
+            object-position: center;
             width: 100%;
             height: 100%;
         }
         .group:hover .fleet-image {
             filter: grayscale(0%);
             opacity: 1;
-            transform: scale(1.1);
+            transform: scale(1.05); /* Reduced scale so it doesn't zoom too much on hover */
         }
-        .card-container { background-color: #0f172a; }
+        .card-container { 
+            background-color: #0f172a; 
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="beach-theme text-white flex flex-col min-h-screen bg-slate-950">
@@ -50,44 +55,45 @@
                 <h2 class="text-5xl font-black uppercase italic tracking-tighter">Elite <span class="gold-text">Logistics</span></h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] card-container border border-white/10 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="relative group rounded-[40px] aspect-video card-container border border-white/10 shadow-2xl">
                     <img src="uber.jpg" class="fleet-image absolute inset-0" alt="Uber Black">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-10 flex flex-col justify-end">
-                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2">Executive Class</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Uber Black Standard</p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Executive Class</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Uber Black Standard</p>
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] card-container border border-white/10 shadow-2xl">
+                <div class="relative group rounded-[40px] aspect-video card-container border border-white/10 shadow-2xl">
                     <img src="plane.jpg" class="fleet-image absolute inset-0" alt="FlySafair">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-10 flex flex-col justify-end">
-                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2">Air Travel</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">FlySafair & Charters</p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Air Travel</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">FlySafair & Charters</p>
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] card-container border border-white/10 shadow-2xl">
+                <div class="relative group rounded-[40px] aspect-video card-container border border-white/10 shadow-2xl">
                     <img src="gautrain.jpg" class="fleet-image absolute inset-0" alt="Gautrain">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-10 flex flex-col justify-end">
-                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2">Gautrain Link</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Rapid Rail Transfers</p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Gautrain Link</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Rapid Rail Transfers</p>
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] card-container border border-white/10 shadow-2xl">
+                <div class="relative group rounded-[40px] aspect-video card-container border border-white/10 shadow-2xl">
                     <img src="cruise.jpg" class="fleet-image absolute inset-0" alt="Boat Cruise">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-10 flex flex-col justify-end">
-                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2">Marine Cruise</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Luxury Yacht Experience</p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Marine Cruise</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Luxury Yacht Experience</p>
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] card-container border border-white/10 shadow-2xl">
+                <div class="relative group rounded-[40px] aspect-video card-container border border-white/10 shadow-2xl">
                     <img src="bus.jpg" class="fleet-image absolute inset-0" alt="Double Decker">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent p-10 flex flex-col justify-end">
-                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2">Grand Touring</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Luxury Coach</p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Grand Touring</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Luxury Coach</p>
                     </div>
                 </div>
             </div>
