@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Fleet | EBBRATO TRAVEL</title>
-    
-    <link rel="icon" type="image/png" href="favicon.png">
-    
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="beach-theme text-white flex flex-col min-h-screen">
-
+    
     <div id="preloader" class="fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center">
         <img src="favicon.png" class="w-20 mb-6 animate-pulse" alt="Ebbrato Loading">
         <div class="loader-logo border-3 border-yellow-600 border-t-transparent rounded-full w-12 h-12 animate-spin"></div>
@@ -24,69 +22,81 @@
             <span>EBBRATO <span class="gold-text">TRAVEL</span></span>
         </div>
         
-        <div class="hidden md:flex space-x-6 text-[9px] font-black uppercase tracking-widest">
+        <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
             <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
             <a href="about.html" class="hover:text-yellow-500 transition">About</a>
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
             <a href="experiences.html" class="hover:text-yellow-500 transition">Experiences</a>
             <a href="fleet.html" class="gold-text">Fleet</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="hover:text-yellow-500 transition">Contact</a>
+            <a href="contact.html" class="hover:text-yellow-500 transition border-l border-white/20 pl-8">Contact</a>
         </div>
     </nav>
 
-    <main class="flex-grow pt-44 pb-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <header class="text-center mb-16">
-                <h1 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-4">
-                    The <span class="gold-text">Fleet</span>
-                </h1>
-                <p class="text-[10px] uppercase tracking-[0.5em] opacity-60">Elite Transport for the Modern Explorer</p>
-            </header>
+    <div class="h-40"></div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-premium group relative overflow-hidden rounded-[40px] aspect-video shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516905?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Executive Sedan">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8">
-                        <h3 class="text-2xl font-black uppercase italic">Executive Sedan</h3>
-                        <p class="text-[9px] uppercase tracking-widest opacity-70">Discreet Luxury & Comfort</p>
-                    </div>
-                </div>
-
-                <div class="card-premium group relative overflow-hidden rounded-[40px] aspect-video shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Premium SUV">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8">
-                        <h3 class="text-2xl font-black uppercase italic">Premium SUV</h3>
-                        <p class="text-[9px] uppercase tracking-widest opacity-70">Power & Presence</p>
-                    </div>
-                </div>
-
-                <div class="card-premium group relative overflow-hidden rounded-[40px] aspect-video shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Group Transport">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8">
-                        <h3 class="text-2xl font-black uppercase italic">Group Elite</h3>
-                        <p class="text-[9px] uppercase tracking-widest opacity-70">Spacious Travel for Teams</p>
-                    </div>
-                </div>
+    <main class="flex-grow mb-20 px-6">
+        <section class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black uppercase italic tracking-tighter">Luxury In <span class="gold-text">Motion</span></h2>
+                <p class="text-[10px] uppercase tracking-widest opacity-50 mt-4">Land • Rail • Air • Sea</p>
             </div>
-        </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] bg-black/40 border border-white/5 shadow-2xl card-premium">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2 text-white">The Shuttle</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Toyota Quantum / Mercedes Sprinter</p>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] leading-relaxed opacity-70 mb-8">Executive group transport for city tours and airport transfers. Comfort for up to 13 passengers.</p>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] bg-black/40 border border-white/5 shadow-2xl card-premium">
+                    <img src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2 text-white">VIP Chauffeur</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Mercedes-Benz C-Class / BMW 5 Series</p>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] leading-relaxed opacity-70 mb-8">Discreet, professional, and ultra-comfortable. Perfect for the solo executive or high-end couples.</p>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] bg-black/40 border border-white/5 shadow-2xl card-premium">
+                    <img src="https://images.unsplash.com/photo-1515162305114-8d3da180715d?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2 text-white">Rail Link</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Gautrain Fast-Track</p>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] leading-relaxed opacity-70 mb-8">Skip the Johannesburg traffic. We manage your high-speed rail transfers between OR Tambo, Sandton, and Pretoria.</p>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] bg-black/40 border border-white/5 shadow-2xl card-premium">
+                    <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2 text-white">Air Charter</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Private Light Aircraft</p>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] leading-relaxed opacity-70 mb-8">Fly directly into the heart of the Kruger or to coastal hideaways. The ultimate time-saving luxury.</p>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-[40px] aspect-[10/14] bg-black/40 border border-white/5 shadow-2xl card-premium">
+                    <img src="https://images.unsplash.com/photo-1567891740298-2b97c36d9f84?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-2 text-white">Sea Cruise</h3>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-4">Private Yachts / Catamarans</p>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] leading-relaxed opacity-70 mb-8">Sunset cruises along the Atlantic Seaboard or the V&A Waterfront. The only way to see the Mother City.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
-    <footer class="py-16 bg-black border-t border-white/10 text-center w-full">
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
-            Johannesburg • Soweto • Cape Town and Beyond
-        </p>
-        <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
-            &copy; 2026 EBBRATO TRAVEL AGENCY • BY GASA TECH
-        </p>
+    <footer class="py-16 bg-black border-t border-white/10 text-center mt-auto">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">Reliable • Luxury • South African</p>
     </footer>
-
-    <a href="https://wa.me/27609592514" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <script src="script.js"></script>
 </body>
