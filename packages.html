@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Fix for blank pictures: Ensures they are visible but greyed out initially */
         .tour-image {
             filter: grayscale(100%);
-            opacity: 0.8; /* Added this to make sure they aren't 'invisible' */
-            transition: all 0.7s ease-in-out;
+            opacity: 0.8;
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
             object-fit: cover;
         }
         .group:hover .tour-image {
             filter: grayscale(0%);
             opacity: 1;
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -30,11 +29,14 @@
             <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3">
             <span>EBBRATO <span class="gold-text">TRAVEL</span></span>
         </div>
+        
         <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
             <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
             <a href="about.html" class="hover:text-yellow-500 transition">About</a>
             <a href="packages.html" class="gold-text">Tours</a>
+            <a href="experiences.html" class="hover:text-yellow-500 transition">Experiences</a>
             <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
+            <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
             <a href="contact.html" class="hover:text-yellow-500 transition border-l border-white/20 pl-8">Contact</a>
         </div>
     </nav>
@@ -44,62 +46,63 @@
     <main class="flex-grow mb-20 px-6">
         <section class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-black uppercase italic tracking-tighter">Premium <span class="gold-text">Experiences</span></h2>
+                <h2 class="text-5xl font-black uppercase italic tracking-tighter">Handcrafted <span class="gold-text">Experiences</span></h2>
+                <p class="text-[10px] uppercase tracking-widest opacity-50 mt-4">Johannesburg • Soweto • Cape Town • Kruger • Panorama • Durban</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] bg-slate-900 border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1577948000111-9c97cdeb20b8?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Soweto">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
+                    <img src="https://images.unsplash.com/photo-1590019200032-6f364026363c?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Soweto Towers">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Gold City</h3>
-                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">JOHANNESBURG & SOWETO • City heritage and cultural soul.</p>
-                        <a href="https://wa.me/27609592514?text=Interested in Gold City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">JOHANNESBURG & SOWETO • A journey through the heart of Mzansi's history and heritage.</p>
+                        <a href="https://wa.me/27609592514?text=Interested in the Gold City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] bg-slate-900 border border-white/10 shadow-2xl">
                     <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Cape Town">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Mother City</h3>
-                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">CAPE TOWN • Table Mountain and coastal wonders.</p>
-                        <a href="https://wa.me/27609592514?text=Interested in Cape Town Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">CAPE TOWN • From Table Mountain to the Winelands. Coastal luxury at its finest.</p>
+                        <a href="https://wa.me/27609592514?text=Interested in the Cape Town Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] bg-slate-900 border border-white/10 shadow-2xl">
                     <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Safari">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Wild Mzansi</h3>
-                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">KRUGER PARK • The ultimate Big Five safari experience.</p>
-                        <a href="https://wa.me/27609592514?text=Interested in Kruger Safari" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">KRUGER PARK • Unrivaled wildlife encounters and five-star luxury bush lodges.</p>
+                        <a href="https://wa.me/27609592514?text=Interested in the Kruger Safari" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] bg-slate-900 border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1627464111364-5830058e7751?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Panorama">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
+                    <img src="https://images.unsplash.com/photo-1594132038758-be664402664d?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Panorama Route">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Panorama Route</h3>
-                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">MPUMALANGA • Breathtaking canyons and God's Window.</p>
-                        <a href="https://wa.me/27609592514?text=Interested in Panorama Route" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">MPUMALANGA • God's Window, waterfalls, and the world's third largest canyon.</p>
+                        <a href="https://wa.me/27609592514?text=Interested in the Panorama Route Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] bg-slate-900 border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Durban">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Durban Beach">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Durban Coast</h3>
-                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">WARM INDIAN OCEAN • Subtropical sun and beach bliss.</p>
-                        <a href="https://wa.me/27609592514?text=Interested in Durban Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">WARM INDIAN OCEAN • The Golden Mile and rich Zulu cultural experiences.</p>
+                        <a href="https://wa.me/27609592514?text=Interested in the Durban Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group overflow-hidden rounded-[40px] aspect-[10/16] bg-slate-900 border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Heritage">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
+                    <img src="https://images.unsplash.com/photo-1523597839747-4698fc496690?q=80&w=800" class="tour-image absolute inset-0 w-full h-full" alt="Cradle of Humankind">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Cradle Heritage</h3>
-                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">UNESCO SITE • Exploring the ancient origins of humanity.</p>
-                        <a href="https://wa.me/27609592514?text=Interested in Cradle Heritage Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-80 mb-8">HUMANKIND ORIGINS • Discover the archaeological secrets of our shared human past.</p>
+                        <a href="https://wa.me/27609592514?text=Interested in the Cradle Heritage Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] hover:bg-yellow-600 transition self-start">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -107,12 +110,14 @@
         </section>
     </main>
 
-    <footer class="py-10 bg-black text-center text-[10px] opacity-40 tracking-[0.4em] uppercase">
-        EBBRATO TRAVEL &copy; 2026
+    <footer class="py-16 bg-black border-t border-white/10 text-center w-full mt-auto">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">EBBRATO TRAVEL • Johannesburg • Cape Town</p>
     </footer>
 
     <a href="https://wa.me/27609592514" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
