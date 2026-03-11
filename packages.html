@@ -23,9 +23,13 @@
             opacity: 1;
             transform: scale(1.05);
         }
+        /* This ensures the card looks good even if the image is missing */
         .card-container { 
-            background-color: #0f172a; 
+            background-color: #111827; 
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
         }
     </style>
 </head>
@@ -52,55 +56,56 @@
         <section class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-black uppercase italic tracking-tighter">Handcrafted <span class="gold-text">Experiences</span></h2>
+                <p class="text-[10px] uppercase tracking-widest opacity-50 mt-4">Johannesburg • Cape Town • Kruger • Panorama • Durban</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <div class="relative group rounded-[40px] aspect-[4/5] card-container border border-white/10 shadow-2xl">
-                    <img src="gold.jpg" class="tour-image absolute inset-0" alt="Johannesburg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                    <img src="gold.jpg" class="tour-image absolute inset-0" alt="Gold City">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Gold City</h3>
-                        <a href="https://wa.me/27609592514?text=Interested in Gold City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27609592514?text=Gold City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group rounded-[40px] aspect-[4/5] card-container border border-white/10 shadow-2xl">
-                    <img src="mother.jpg" class="tour-image absolute inset-0" alt="Cape Town">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                    <img src="mother.jpg" class="tour-image absolute inset-0" alt="Mother City">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Mother City</h3>
-                        <a href="https://wa.me/27609592514?text=Interested in Cape Town Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27609592514?text=Mother City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group rounded-[40px] aspect-[4/5] card-container border border-white/10 shadow-2xl">
-                    <img src="wild.jpg" class="tour-image absolute inset-0" alt="Kruger Safari">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                    <img src="wild.jpg" class="tour-image absolute inset-0" alt="Wild Mzansi">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Wild Mzansi</h3>
-                        <a href="https://wa.me/27609592514?text=Interested in Safari" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27609592514?text=Wild Mzansi Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group rounded-[40px] aspect-[4/5] card-container border border-white/10 shadow-2xl">
-                    <img src="panorama.jpg" class="tour-image absolute inset-0" alt="Panorama Route">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                    <img src="panorama.jpg" class="tour-image absolute inset-0" alt="Panorama">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Panorama Route</h3>
-                        <a href="https://wa.me/27609592514?text=Interested in Panorama Route" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27609592514?text=Panorama Route Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group rounded-[40px] aspect-[4/5] card-container border border-white/10 shadow-2xl">
-                    <img src="durban.jpg" class="tour-image absolute inset-0" alt="Durban Coast">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                    <img src="durban.jpg" class="tour-image absolute inset-0" alt="Durban">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Durban Coast</h3>
-                        <a href="https://wa.me/27609592514?text=Interested in Durban Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27609592514?text=Durban Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
                 <div class="relative group rounded-[40px] aspect-[4/5] card-container border border-white/10 shadow-2xl">
-                    <img src="cradle.jpg" class="tour-image absolute inset-0" alt="Cradle Heritage">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 flex flex-col justify-end">
+                    <img src="cradle.jpg" class="tour-image absolute inset-0" alt="Cradle">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Cradle Heritage</h3>
-                        <a href="https://wa.me/27609592514?text=Interested in Cradle Heritage" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27609592514?text=Cradle Heritage Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -108,11 +113,11 @@
         </section>
     </main>
 
-    <footer class="py-16 bg-black text-center">
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">EBBRATO TRAVEL &copy; 2026</p>
+    <footer class="py-16 bg-black text-center border-t border-white/10">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">EBBRATO TRAVEL • Luxury In Motion</p>
     </footer>
 
-    <a href="https://wa.me/27609592514" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 hover:scale-110 transition shadow-2xl">
+    <a href="https://wa.me/27609592514" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
         <i class="fab fa-whatsapp"></i>
     </a>
 </body>
