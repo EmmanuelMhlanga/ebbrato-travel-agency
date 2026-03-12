@@ -63,24 +63,51 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Mobile Menu Animation */
+        #mobile-menu.active {
+            display: flex;
+            animation: slideDown 0.3s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
     
     <div class="water-bg"></div>
 
-    <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/90 backdrop-blur-md border-b border-white/5">
-        <div class="flex items-center text-xl font-black uppercase tracking-tighter">
-            <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3">
-            <span>EBBRATO <span class="gold-text">TRAVEL</span></span>
+    <nav class="fixed w-full z-[100] p-6 bg-slate-950/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <div class="flex items-center text-xl font-black uppercase tracking-tighter">
+                <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3">
+                <span>EBBRATO <span class="gold-text">TRAVEL</span></span>
+            </div>
+
+            <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
+                <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
+                <a href="about.html" class="hover:text-yellow-500 transition">About</a>
+                <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
+                <a href="fleet.html" class="gold-text">Fleet</a>
+                <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
+                <a href="contact.html" class="hover:text-yellow-500 transition border-l border-white/20 pl-8">Contact</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-white p-2 focus:outline-none">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
         </div>
-        <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
-            <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
-            <a href="about.html" class="hover:text-yellow-500 transition">About</a>
-            <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
-            <a href="fleet.html" class="gold-text">Fleet</a>
-            <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="hover:text-yellow-500 transition border-l border-white/20 pl-8">Contact</a>
+
+        <div id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-slate-950 border-b border-white/10 p-8 space-y-6 text-center text-[12px] font-black uppercase tracking-[0.3em] md:hidden shadow-2xl">
+            <a href="index.html" class="hover:text-yellow-500 py-2">Home</a>
+            <a href="about.html" class="hover:text-yellow-500 py-2 border-t border-white/5">About</a>
+            <a href="packages.html" class="hover:text-yellow-500 py-2 border-t border-white/5">Tours</a>
+            <a href="fleet.html" class="gold-text py-2 border-t border-white/5">Fleet</a>
+            <a href="gallery.html" class="hover:text-yellow-500 py-2 border-t border-white/5">Gallery</a>
+            <a href="contact.html" class="bg-white text-black py-4 rounded-full mt-4">Contact</a>
         </div>
     </nav>
 
@@ -156,5 +183,24 @@
     <a href="https://wa.me/27639938057" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
 </body>
 </html>
