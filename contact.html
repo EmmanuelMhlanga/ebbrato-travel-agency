@@ -10,14 +10,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         /* Animated Water Background */
-        .bg-animated-water {
+        .water-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
                         url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
@@ -25,51 +25,49 @@
         }
 
         @keyframes waterMove {
-            0% { transform: scale(1.0); }
-            100% { transform: scale(1.15); }
+            0% { transform: scale(1); background-position: center; }
+            100% { transform: scale(1.1); background-position: bottom; }
         }
 
-        .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Moving UI Animations */
+        .reveal-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
         }
 
-        /* Input Styling */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         input, select, textarea {
             background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
             color: white !important;
-        }
-
-        /* THE FIX FOR THE DROPDOWN WHITE BOX */
-        select option {
-            background-color: #0f172a !important; /* Matches slate-950 */
-            color: white !important;
-            padding: 10px;
+            transition: all 0.3s ease;
         }
 
         input:focus, select:focus, textarea:focus {
-            border-color: #eab308 !important;
+            border-color: #bf953f !important;
+            background: rgba(255, 255, 255, 0.1) !important;
             outline: none;
-            box-shadow: 0 0 15px rgba(234, 179, 8, 0.3);
-        }
-
-        .gold-gradient-text {
-            background: linear-gradient(45deg, #eab308, #fef08a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
 <body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
 
-    <div class="bg-animated-water"></div>
-    
+    <div class="water-bg"></div>
+
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/80 backdrop-blur-md border-b border-white/5">
         <div class="flex items-center text-xl font-black uppercase tracking-tighter">
             <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3">
-            <span>EBBRATO <span class="gold-gradient-text">TRAVEL</span></span>
+            <span>EBBRATO <span class="gold-text">TRAVEL</span></span>
         </div>
         <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest">
             <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
@@ -77,91 +75,84 @@
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
             <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="text-yellow-500 border-l border-white/20 pl-8 font-black">Contact</a>
+            <a href="contact.html" class="gold-text border-l border-white/20 pl-8">Contact</a>
         </div>
     </nav>
 
-    <div class="h-40"></div>
-
-    <main class="flex-grow container mx-auto px-6 mb-20">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <div class="space-y-10">
-                <h1 class="text-7xl font-black uppercase italic tracking-tighter leading-none">
-                    Let's Plan <br><span class="gold-gradient-text">Your Escape</span>
-                </h1>
-                
-                <div class="space-y-8">
-                    <div class="flex items-center space-x-6">
-                        <div class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center text-yellow-500 shadow-xl">
-                            <i class="fas fa-phone-alt text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-bold">24/7 Concierge</p>
-                            <p class="text-xl font-black">+27 63 993 8057</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-6">
-                        <div class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center text-yellow-500 shadow-xl">
-                            <i class="fas fa-envelope text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-bold">Inquiries</p>
-                            <p class="text-xl font-black italic">info@ebbratotravel.co.za</p>
-                        </div>
-                    </div>
-                </div>
+    <main class="flex-grow pt-40 pb-20 px-6 relative z-10">
+        <section class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 reveal-up">
+                <h2 class="text-5xl font-black uppercase italic tracking-tighter">Start Your <span class="gold-text">Journey</span></h2>
+                <p class="text-[10px] uppercase tracking-[0.4em] opacity-60 mt-4">Personalized Heritage & Luxury Bookings</p>
             </div>
 
-            <div class="glass-card p-10 md:p-12 rounded-[50px] shadow-2xl relative">
-                <form action="#" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="text-[10px] uppercase tracking-widest font-black text-yellow-500/80 ml-2">Full Name</label>
-                            <input type="text" placeholder="Lerato Moloi" class="w-full p-5 rounded-2xl">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-[10px] uppercase tracking-widest font-black text-yellow-500/80 ml-2">Email Address</label>
-                            <input type="email" placeholder="client@example.com" class="w-full p-5 rounded-2xl">
-                        </div>
+            <div class="bg-black/40 backdrop-blur-xl p-8 md:p-12 rounded-[40px] border border-white/10 shadow-2xl reveal-up">
+                <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col">
+                        <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">Full Name</label>
+                        <input type="text" placeholder="Nkosana" class="p-4 rounded-2xl text-sm">
                     </div>
 
-                    <div class="space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest font-black text-yellow-500/80 ml-2">Your Destination</label>
-                        <select class="w-full p-5 rounded-2xl appearance-none cursor-pointer">
-                            <option value="" disabled selected>Select a Tour...</option>
-                            <option value="gold-city">The Gold City (Johannesburg)</option>
-                            <option value="mother-city">The Mother City (Cape Town)</option>
-                            <option value="wild-mzansi">Wild Mzansi (Kruger Safari)</option>
-                            <option value="panorama">Panorama Route</option>
-                            <option value="durban">Durban Coast</option>
-                            <option value="cradle">Cradle Heritage</option>
-                            <option value="general">General Travel Inquiry</option>
+                    <div class="flex flex-col">
+                        <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">Email Address</label>
+                        <input type="email" placeholder="example@email.com" class="p-4 rounded-2xl text-sm">
+                    </div>
+
+                    <div class="flex flex-col md:col-span-2">
+                        <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">Select Destination</label>
+                        <select class="p-4 rounded-2xl text-sm appearance-none">
+                            <option>Johannesburg & Soweto</option>
+                            <option>Cape Town & Peninsula</option>
+                            <option>Kruger National Park</option>
+                            <option>Panorama Route</option>
+                            <option>Durban Coastline</option>
                         </select>
                     </div>
 
-                    <div class="space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest font-black text-yellow-500/80 ml-2">Message</label>
-                        <textarea rows="4" placeholder="How can we make your trip legendary?" class="w-full p-5 rounded-2xl"></textarea>
+                    <div class="flex flex-col md:col-span-2">
+                        <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">How can we make your trip unforgettable?</label>
+                        <textarea rows="4" placeholder="Tell us about your dream escape, preferred dates, or special requests. How can we make this your most unforgettable African journey?" class="p-4 rounded-2xl text-sm"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-yellow-500 hover:bg-white text-black font-black uppercase tracking-[0.2em] py-6 rounded-2xl transition-all duration-500 shadow-lg hover:shadow-yellow-500/20">
-                        Send Inquiry
-                    </button>
+                    <div class="md:col-span-2">
+                        <button class="w-full bg-white text-black font-black uppercase text-[10px] tracking-widest py-5 rounded-full hover:bg-yellow-600 hover:text-white transition-all transform hover:scale-[1.02]">
+                            Send Inquiry
+                        </button>
+                    </div>
                 </form>
             </div>
-
-        </div>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 reveal-up" style="animation-delay: 0.4s;">
+                <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
+                    <i class="fas fa-shield-alt text-yellow-600 mb-3"></i>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest mb-1">Safety First</h4>
+                    <p class="text-[9px] opacity-50 uppercase">24/7 Professional Chauffeur Protection</p>
+                </div>
+                <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
+                    <i class="fas fa-map-marked-alt text-yellow-600 mb-3"></i>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest mb-1">Local Experts</h4>
+                    <p class="text-[9px] opacity-50 uppercase">Guides who know the hidden soul of Mzansi</p>
+                </div>
+                <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
+                    <i class="fas fa-concierge-bell text-yellow-600 mb-3"></i>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest mb-1">Bespoke Only</h4>
+                    <p class="text-[9px] opacity-50 uppercase">Tailored to your specific luxury needs</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="py-10 text-center opacity-40">
-        <p class="text-[9px] font-bold uppercase tracking-[0.5em]">EBBRATO TRAVEL • SOUTH AFRICA</p>
+    <footer class="py-16 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
+            Johannesburg • Soweto • Cape Town and Beyond
+        </p>
+        <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
+            &copy; 2026 EBBRATO TRAVEL • BY GASA TECH
+        </p>
     </footer>
 
-    <a href="https://wa.me/27639938057" class="fixed bottom-10 right-10 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50 shadow-2xl hover:scale-110 transition-transform">
+    <a href="https://wa.me/27639938057" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
         <i class="fab fa-whatsapp"></i>
     </a>
-
 </body>
 </html>
