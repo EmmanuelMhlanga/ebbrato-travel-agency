@@ -3,17 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Fleet | EBBRATO TRAVEL</title>
+    <title>Elite Logistics | EBBRATO TRAVEL</title>
     <link rel="icon" type="image/png" href="favicon.png?v=2">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Animated Water Background */
+        .water-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            animation: waterMove 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes waterMove {
+            0% { transform: scale(1); background-position: center; }
+            100% { transform: scale(1.1); background-position: top; }
+        }
+
+        /* Moving Text Animations */
+        .reveal-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .fleet-image {
             filter: grayscale(100%);
             opacity: 0.9;
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            /* Changed to contain or better centered cover to prevent extreme zoom */
             object-fit: cover; 
             object-position: center;
             width: 100%;
@@ -22,16 +52,23 @@
         .group:hover .fleet-image {
             filter: grayscale(0%);
             opacity: 1;
-            transform: scale(1.05); /* Reduced scale so it doesn't zoom too much on hover */
+            transform: scale(1.08); 
         }
         .card-container { 
             background-color: #0f172a; 
             overflow: hidden;
         }
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="beach-theme text-white flex flex-col min-h-screen bg-slate-950">
+<body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
     
+    <div class="water-bg"></div>
+
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/90 backdrop-blur-md border-b border-white/5">
         <div class="flex items-center text-xl font-black uppercase tracking-tighter">
             <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3">
@@ -49,19 +86,21 @@
 
     <div class="h-40"></div>
 
-    <main class="flex-grow mb-20 px-6">
+    <main class="flex-grow mb-20 px-6 relative z-10">
         <section class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black uppercase italic tracking-tighter">Elite <span class="gold-text">Logistics</span></h2>
+            <div class="text-center mb-16 reveal-up">
+                <h2 class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter">Luxury <span class="gold-text">In Motion</span></h2>
+                <p class="text-[10px] uppercase tracking-[0.5em] opacity-50 mt-4">Seamless Transportation Across South Africa</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-up">
                 
                 <div class="relative group rounded-[40px] aspect-video card-container border border-white/10 shadow-2xl">
                     <img src="uber.jpg" class="fleet-image absolute inset-0" alt="Uber Black">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
                         <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Executive Class</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Uber Black Standard</p>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-2">Uber Black Standard</p>
+                        <p class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-wide leading-relaxed max-w-xs">Bespoke private transfers through the streets of Sandton and Rosebank.</p>
                     </div>
                 </div>
 
@@ -69,7 +108,8 @@
                     <img src="plane.jpg" class="fleet-image absolute inset-0" alt="FlySafair">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
                         <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Air Travel</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">FlySafair & Charters</p>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-2">FlySafair & Charters</p>
+                        <p class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-wide leading-relaxed max-w-xs">Connecting the Gold City to the Mother City in premium comfort.</p>
                     </div>
                 </div>
 
@@ -77,7 +117,8 @@
                     <img src="gautrain.jpg" class="fleet-image absolute inset-0" alt="Gautrain">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
                         <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Gautrain Link</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Rapid Rail Transfers</p>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-2">Rapid Rail Transfers</p>
+                        <p class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-wide leading-relaxed max-w-xs">Fast-track logistics between OR Tambo and the heart of Gauteng.</p>
                     </div>
                 </div>
 
@@ -85,7 +126,8 @@
                     <img src="cruise.jpg" class="fleet-image absolute inset-0" alt="Boat Cruise">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
                         <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Marine Cruise</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Luxury Yacht Experience</p>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-2">Luxury Yacht Experience</p>
+                        <p class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-wide leading-relaxed max-w-xs">Set sail from the V&A Waterfront for a sunset Atlantic experience.</p>
                     </div>
                 </div>
 
@@ -93,15 +135,26 @@
                     <img src="bus.jpg" class="fleet-image absolute inset-0" alt="Double Decker">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-8 flex flex-col justify-end">
                         <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-1">Grand Touring</h3>
-                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500">Luxury Coach</p>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-yellow-500 mb-2">Luxury Coach</p>
+                        <p class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 tracking-wide leading-relaxed max-w-xs">Spacious group travel through the breathtaking Panorama Route.</p>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
 
-    <footer class="py-16 bg-black text-center">
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">EBBRATO TRAVEL • LUXURY IN MOTION</p>
+    <footer class="py-16 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
+            Johannesburg • Soweto • Cape Town and Beyond
+        </p>
+        <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
+            &copy; 2026 EBBRATO TRAVEL AGENCY • BY GASA TECH
+        </p>
     </footer>
+
+    <a href="https://wa.me/27639938057" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
