@@ -9,6 +9,37 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Animated Water Background */
+        .water-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            animation: waterMove 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes waterMove {
+            0% { transform: scale(1); background-position: center; }
+            100% { transform: scale(1.1); background-position: top; }
+        }
+
+        /* Moving Text Animations */
+        .reveal-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .tour-image {
             filter: grayscale(100%);
             opacity: 0.9;
@@ -23,7 +54,6 @@
             opacity: 1;
             transform: scale(1.05);
         }
-        /* This ensures the card looks good even if the image is missing */
         .card-container { 
             background-color: #111827; 
             overflow: hidden;
@@ -31,10 +61,17 @@
             flex-direction: column;
             justify-content: flex-end;
         }
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="beach-theme text-white flex flex-col min-h-screen bg-slate-950">
+<body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
     
+    <div class="water-bg"></div>
+
     <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-slate-950/90 backdrop-blur-md border-b border-white/5">
         <div class="flex items-center text-xl font-black uppercase tracking-tighter">
             <img src="favicon.png" alt="Logo" class="w-10 h-10 mr-3">
@@ -52,20 +89,20 @@
 
     <div class="h-40"></div>
 
-    <main class="flex-grow mb-20 px-6">
+    <main class="flex-grow mb-20 px-6 relative z-10">
         <section class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal-up">
                 <h2 class="text-5xl font-black uppercase italic tracking-tighter">Handcrafted <span class="gold-text">Experiences</span></h2>
                 <p class="text-[10px] uppercase tracking-widest opacity-50 mt-4">Johannesburg • Cape Town • Kruger • Panorama • Durban</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-up">
                 
                 <div class="relative group rounded-[40px] aspect-[4/5] card-container border border-white/10 shadow-2xl">
                     <img src="gold.jpg" class="tour-image absolute inset-0" alt="Gold City">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Gold City</h3>
-                        <a href="https://wa.me/27609592514?text=Gold City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27639938057?text=Gold City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -73,7 +110,7 @@
                     <img src="mother.jpg" class="tour-image absolute inset-0" alt="Mother City">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">The Mother City</h3>
-                        <a href="https://wa.me/27609592514?text=Mother City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27639938057?text=Mother City Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -81,7 +118,7 @@
                     <img src="wild.jpg" class="tour-image absolute inset-0" alt="Wild Mzansi">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Wild Mzansi</h3>
-                        <a href="https://wa.me/27609592514?text=Wild Mzansi Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27639938057?text=Wild Mzansi Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -89,7 +126,7 @@
                     <img src="panorama.jpg" class="tour-image absolute inset-0" alt="Panorama">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Panorama Route</h3>
-                        <a href="https://wa.me/27609592514?text=Panorama Route Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27639938057?text=Panorama Route Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -97,7 +134,7 @@
                     <img src="durban.jpg" class="tour-image absolute inset-0" alt="Durban">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Durban Coast</h3>
-                        <a href="https://wa.me/27609592514?text=Durban Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27639938057?text=Durban Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -105,7 +142,7 @@
                     <img src="cradle.jpg" class="tour-image absolute inset-0" alt="Cradle">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
                         <h3 class="text-3xl font-black uppercase italic tracking-tighter mb-4">Cradle Heritage</h3>
-                        <a href="https://wa.me/27609592514?text=Cradle Heritage Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
+                        <a href="https://wa.me/27639938057?text=Cradle Heritage Tour" class="bg-white text-black py-4 px-8 rounded-full font-black uppercase text-[10px] self-start hover:bg-yellow-500 transition">Request Itinerary</a>
                     </div>
                 </div>
 
@@ -113,11 +150,16 @@
         </section>
     </main>
 
-    <footer class="py-16 bg-black text-center border-t border-white/10">
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">EBBRATO TRAVEL • Luxury In Motion</p>
+    <footer class="py-16 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
+            Johannesburg • Soweto • Cape Town and Beyond
+        </p>
+        <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
+            &copy; 2026 EBBRATO TRAVEL AGENCY • BY GASA TECH
+        </p>
     </footer>
 
-    <a href="https://wa.me/27609592514" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
+    <a href="https://wa.me/27639938057" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
         <i class="fab fa-whatsapp"></i>
     </a>
 </body>
