@@ -8,8 +8,59 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Animated Water Background */
+        .water-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Using a high-quality beach/water image */
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            animation: kenBurnsWater 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes kenBurnsWater {
+            0% { transform: scale(1); background-position: center; }
+            100% { transform: scale(1.1); background-position: top; }
+        }
+
+        /* Moving UI Animations */
+        .reveal-text {
+            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-style: italic;
+        }
+    </style>
 </head>
-<body class="beach-theme text-white flex flex-col min-h-screen">
+<body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
+
+    <div class="water-bg"></div>
 
     <div id="preloader" class="fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center">
         <img src="favicon.png" class="w-20 mb-6 animate-pulse" alt="Ebbrato Loading">
@@ -23,34 +74,36 @@
         </div>
         <div class="hidden md:flex space-x-6 text-[9px] font-black uppercase tracking-widest">
             <a href="index.html" class="gold-text">Home</a>
-            <a href="about.html">About</a>
-            <a href="packages.html">Tours</a>
-            <a href="experiences.html">Experiences</a>
-            <a href="fleet.html">Fleet</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
+            <a href="about.html" class="hover:text-yellow-500 transition">About</a>
+            <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
+            <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
+            <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
+            <a href="contact.html" class="hover:text-yellow-500 transition border-l border-white/20 pl-6">Contact</a>
         </div>
     </nav>
 
-    <main class="flex-grow flex items-center justify-center text-center px-6 pt-32 pb-20">
+    <main class="flex-grow flex items-center justify-center text-center px-6 pt-32 pb-20 relative z-10">
         <div class="max-w-5xl">
-            <h1 class="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-4 leading-none">
+            <h1 class="reveal-text text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-4 leading-none">
                 Your Guide To<br><span class="gold-text">Travel and Adventure</span>
             </h1>
-            <p class="text-[10px] uppercase tracking-[0.6em] opacity-60 mt-6">Curated Chauffeurs & Private Heritage Tours</p>
+            <p class="reveal-text delay-1 text-[10px] md:text-[12px] uppercase tracking-[0.6em] text-white/80 mt-6 font-medium">
+                Curated Chauffeurs & Private Heritage Tours
+            </p>
             
-            <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
-                <a href="packages.html" class="border border-white/20 px-10 py-4 rounded-full text-[9px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-                    Explore Collections
+            <div class="reveal-text delay-2 mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="packages.html" class="group relative border border-white/20 px-10 py-4 rounded-full text-[9px] font-black uppercase tracking-widest overflow-hidden transition-all">
+                    <span class="relative z-10 group-hover:text-black transition-colors duration-300">Explore Collections</span>
+                    <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                 </a>
-                <a href="contact.html" class="bg-white text-black px-10 py-4 rounded-full text-[9px] font-black uppercase tracking-widest hover:bg-yellow-600 hover:text-white transition-all">
+                <a href="contact.html" class="bg-white text-black px-10 py-4 rounded-full text-[9px] font-black uppercase tracking-widest hover:bg-yellow-600 hover:text-white hover:scale-105 transition-all shadow-xl">
                     Book Now
                 </a>
             </div>
         </div>
     </main>
 
-    <footer class="py-16 bg-black/90 border-t border-white/10 text-center w-full">
+    <footer class="py-16 bg-black/40 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
         <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
             Johannesburg • Soweto • Cape Town and Beyond
         </p>
@@ -59,7 +112,7 @@
         </p>
     </footer>
 
-    <a href="https://wa.me/27609592514" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
+    <a href="https://wa.me/27639938057" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110 active:scale-90">
         <i class="fab fa-whatsapp"></i>
     </a>
 
