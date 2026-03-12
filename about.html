@@ -10,8 +10,56 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Animated Water Background */
+        .water-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            animation: waterMove 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes waterMove {
+            0% { transform: scale(1); background-position: center; }
+            100% { transform: scale(1.15); background-position: bottom; }
+        }
+
+        /* Moving Text Animations */
+        .reveal-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body class="beach-theme text-white flex flex-col min-h-screen">
+<body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
+
+    <div class="water-bg"></div>
 
     <div id="preloader" class="fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center">
         <img src="favicon.png" class="w-20 mb-6 animate-pulse" alt="Ebbrato Loading">
@@ -28,30 +76,29 @@
             <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
             <a href="about.html" class="gold-text">About</a>
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
-            <a href="experiences.html" class="hover:text-yellow-500 transition">Experiences</a>
             <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="hover:text-yellow-500 transition">Contact</a>
+            <a href="contact.html" class="hover:text-yellow-500 transition border-l border-white/20 pl-6">Contact</a>
         </div>
     </nav>
 
-    <main class="flex-grow pt-48 pb-20 px-6">
+    <main class="flex-grow pt-48 pb-20 px-6 relative z-10">
         <div class="max-w-6xl mx-auto text-center">
             
-            <div class="mb-24">
-                <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-8">
+            <div class="mb-24 reveal-up">
+                <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
                     Our <span class="gold-text">Legacy</span>
                 </h2>
-                <p class="text-[11px] md:text-[13px] uppercase tracking-[0.3em] leading-loose opacity-80 max-w-3xl mx-auto px-4">
+                <p class="text-[11px] md:text-[13px] uppercase tracking-[0.3em] leading-loose opacity-80 max-w-3xl mx-auto px-4 font-medium">
                     EBBRATO TRAVEL is a premier South African touring agency dedicated to luxury, heritage, and world-class adventure. We specialize in curated journeys that connect global travelers to the authentic soul of Mzansi, ensuring every mile is traveled with style and safety.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="grid md:grid-cols-2 gap-12 reveal-up delay-1">
                 
-                <div class="card-premium p-8 rounded-[50px] border border-white/10 group bg-slate-900/40 backdrop-blur-sm">
+                <div class="card-premium p-8 rounded-[50px] border border-white/10 group bg-slate-900/40 backdrop-blur-md hover:border-yellow-500/30 transition-all duration-500 shadow-2xl">
                     <div class="overflow-hidden rounded-[40px] mb-8 h-80 bg-black/20">
-                        <img src="bongi.jpg" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700" alt="Bongi">
+                        <img src="bongi.jpg" class="w-full h-full object-contain grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Bongi">
                     </div>
                     <h3 class="text-3xl font-black uppercase italic gold-text tracking-tighter">Bongi</h3>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] mb-4 opacity-60">Travel Consultant</p>
@@ -60,9 +107,9 @@
                     </p>
                 </div>
 
-                <div class="card-premium p-8 rounded-[50px] border border-white/10 group bg-slate-900/40 backdrop-blur-sm">
+                <div class="card-premium p-8 rounded-[50px] border border-white/10 group bg-slate-900/40 backdrop-blur-md hover:border-yellow-500/30 transition-all duration-500 shadow-2xl">
                     <div class="overflow-hidden rounded-[40px] mb-8 h-80 bg-black/20">
-                        <img src="lerato.jpg" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700" alt="Lerato">
+                        <img src="lerato.jpg" class="w-full h-full object-contain grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Lerato">
                     </div>
                     <h3 class="text-3xl font-black uppercase italic gold-text tracking-tighter">Lerato</h3>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] mb-4 opacity-60">Travel Agent</p>
@@ -75,7 +122,7 @@
         </div>
     </main>
 
-    <footer class="py-16 bg-black border-t border-white/10 text-center w-full">
+    <footer class="py-16 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
         <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
             Johannesburg • Soweto • Cape Town and Beyond
         </p>
@@ -84,7 +131,7 @@
         </p>
     </footer>
 
-    <a href="https://wa.me/27609592514" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110">
+    <a href="https://wa.me/27639938057" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110 active:scale-90">
         <i class="fab fa-whatsapp"></i>
     </a>
 
