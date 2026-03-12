@@ -29,21 +29,16 @@
             100% { transform: scale(1.1); background-position: bottom; }
         }
 
-        /* Moving UI Animations */
-        .reveal-up {
-            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-            opacity: 0;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         .gold-text {
             background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* DARK DROPDOWN FIX */
+        select option {
+            background-color: #0f172a !important; /* Matches your dark slate theme */
+            color: white !important;
         }
 
         input, select, textarea {
@@ -58,9 +53,21 @@
             background: rgba(255, 255, 255, 0.1) !important;
             outline: none;
         }
+
+        .recommend-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .recommend-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: #bf953f;
+            transform: translateY(-5px);
+        }
     </style>
 </head>
-<body class="text-white flex flex-col min-h-screen bg-slate-950 overflow-x-hidden">
+<body class="text-white flex flex-col min-h-screen bg-slate-950">
 
     <div class="water-bg"></div>
 
@@ -75,18 +82,18 @@
             <a href="packages.html" class="hover:text-yellow-500 transition">Tours</a>
             <a href="fleet.html" class="hover:text-yellow-500 transition">Fleet</a>
             <a href="gallery.html" class="hover:text-yellow-500 transition">Gallery</a>
-            <a href="contact.html" class="gold-text border-l border-white/20 pl-8">Contact</a>
+            <a href="contact.html" class="gold-text">Contact</a>
         </div>
     </nav>
 
-    <main class="flex-grow pt-40 pb-20 px-6 relative z-10">
+    <main class="flex-grow pt-40 pb-20 px-6">
         <section class="max-w-4xl mx-auto">
-            <div class="text-center mb-12 reveal-up">
+            <div class="text-center mb-12">
                 <h2 class="text-5xl font-black uppercase italic tracking-tighter">Start Your <span class="gold-text">Journey</span></h2>
                 <p class="text-[10px] uppercase tracking-[0.4em] opacity-60 mt-4">Personalized Heritage & Luxury Bookings</p>
             </div>
 
-            <div class="bg-black/40 backdrop-blur-xl p-8 md:p-12 rounded-[40px] border border-white/10 shadow-2xl reveal-up">
+            <div class="bg-black/40 backdrop-blur-xl p-8 md:p-12 rounded-[40px] border border-white/10 shadow-2xl">
                 <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="flex flex-col">
                         <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">Full Name</label>
@@ -101,6 +108,7 @@
                     <div class="flex flex-col md:col-span-2">
                         <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">Select Destination</label>
                         <select class="p-4 rounded-2xl text-sm appearance-none">
+                            <option value="" disabled selected>Select your dream destination...</option>
                             <option>Johannesburg & Soweto</option>
                             <option>Cape Town & Peninsula</option>
                             <option>Kruger National Park</option>
@@ -110,8 +118,8 @@
                     </div>
 
                     <div class="flex flex-col md:col-span-2">
-                        <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">How can we make your trip unforgettable?</label>
-                        <textarea rows="4" placeholder="Tell us about your dream escape, preferred dates, or special requests. How can we make this your most unforgettable African journey?" class="p-4 rounded-2xl text-sm"></textarea>
+                        <label class="text-[9px] uppercase tracking-widest mb-2 opacity-50">Inquiry Details</label>
+                        <textarea rows="4" placeholder="How can we make your trip unforgettable? Tell us your preferred dates or any special requirements." class="p-4 rounded-2xl text-sm"></textarea>
                     </div>
 
                     <div class="md:col-span-2">
@@ -122,27 +130,30 @@
                 </form>
             </div>
             
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 reveal-up" style="animation-delay: 0.4s;">
-                <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
-                    <i class="fas fa-shield-alt text-yellow-600 mb-3"></i>
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest mb-1">Safety First</h4>
-                    <p class="text-[9px] opacity-50 uppercase">24/7 Professional Chauffeur Protection</p>
-                </div>
-                <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
-                    <i class="fas fa-map-marked-alt text-yellow-600 mb-3"></i>
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest mb-1">Local Experts</h4>
-                    <p class="text-[9px] opacity-50 uppercase">Guides who know the hidden soul of Mzansi</p>
-                </div>
-                <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
-                    <i class="fas fa-concierge-bell text-yellow-600 mb-3"></i>
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest mb-1">Bespoke Only</h4>
-                    <p class="text-[9px] opacity-50 uppercase">Tailored to your specific luxury needs</p>
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-black uppercase italic gold-text mb-8">Our Elite Standards</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="recommend-card p-8 rounded-3xl text-center">
+                        <i class="fas fa-shield-alt text-2xl text-yellow-600 mb-4"></i>
+                        <h4 class="text-[10px] font-bold uppercase tracking-widest mb-2">Secure Travel</h4>
+                        <p class="text-[9px] opacity-50 uppercase leading-relaxed">Full chauffeur protection and private security options available.</p>
+                    </div>
+                    <div class="recommend-card p-8 rounded-3xl text-center">
+                        <i class="fas fa-map-marked-alt text-2xl text-yellow-600 mb-4"></i>
+                        <h4 class="text-[10px] font-bold uppercase tracking-widest mb-2">Heritage Experts</h4>
+                        <p class="text-[9px] opacity-50 uppercase leading-relaxed">Experience the true soul of Soweto and Joburg with local curators.</p>
+                    </div>
+                    <div class="recommend-card p-8 rounded-3xl text-center">
+                        <i class="fas fa-gem text-2xl text-yellow-600 mb-4"></i>
+                        <h4 class="text-[10px] font-bold uppercase tracking-widest mb-2">VIP Concierge</h4>
+                        <p class="text-[9px] opacity-50 uppercase leading-relaxed">Everything from private jets to yacht charters handled with precision.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-16 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
+    <footer class="py-16 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full">
         <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
             Johannesburg • Soweto • Cape Town and Beyond
         </p>
