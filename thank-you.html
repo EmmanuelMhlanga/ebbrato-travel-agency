@@ -1,27 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | EBBRATO</title>
-    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/earth-africa.svg">
-    <script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | EBBRATO TRAVEL</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reusing the animated water background for consistency */
+        .water-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            animation: waterMove 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes waterMove {
+            0% { transform: scale(1); background-position: center; }
+            100% { transform: scale(1.1); background-position: top; }
+        }
+
+        .reveal-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body class="beach-theme text-white flex flex-col min-h-screen">
+<body class="bg-slate-950 text-white flex flex-col min-h-screen overflow-x-hidden">
+
+    <div class="water-bg"></div>
     <div id="preloader"><div class="loader-logo"></div></div>
 
-    <div class="flex-grow flex items-center justify-center text-center px-6">
-        <div class="card-premium p-16 rounded-[60px] max-w-2xl">
-            <i class="fas fa-paper-plane text-5xl gold-text mb-8"></i>
-            <h2 class="text-5xl font-black uppercase italic mb-6">Inquiry <span class="gold-text">Received</span></h2>
-            <p class="text-[11px] uppercase tracking-[0.3em] opacity-70 leading-loose mb-10">Our concierge team will reach out to you within 24 hours to finalize your luxury itinerary.</p>
-            <a href="index.html" class="bg-white text-black px-12 py-5 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-yellow-600 transition">Return Home</a>
+    <main class="flex-grow flex items-center justify-center px-6">
+        <div class="card-premium p-12 md:p-20 rounded-[40px] max-w-2xl text-center reveal-up shadow-2xl border border-white/10">
+            <div class="mb-8">
+                <i class="fas fa-paper-plane text-6xl gold-text"></i>
+            </div>
+            
+            <h2 class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter mb-6 leading-none">
+                Inquiry <br> <span class="gold-text">Received</span>
+            </h2>
+            
+            <p class="text-[11px] md:text-[12px] uppercase tracking-[0.4em] opacity-70 leading-relaxed mb-12 max-w-md mx-auto">
+                Our concierge team will reach out within 24 hours to finalize your luxury itinerary.
+            </p>
+            
+            <div class="flex flex-col items-center gap-6">
+                <a href="index.html" class="bg-white text-black px-12 py-5 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-yellow-600 hover:text-white transition-all duration-500">
+                    Return Home
+                </a>
+                
+                <div class="flex space-x-6 text-white/40 text-sm">
+                    <a href="#" class="hover:text-yellow-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-yellow-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/27639938057" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
-    <footer class="py-10 px-6 border-t border-white/10 bg-black/90 text-center">
-        <p class="text-[10px] uppercase tracking-[0.3em] opacity-50">Johannesburg • Soweto • Cape Town and Beyond</p>
+    <footer class="py-12 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
+            Johannesburg • Soweto • Cape Town and Beyond
+        </p>
+        <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
+            &copy; 2026 EBBRATO TRAVEL • BY GASA TECH
+        </p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
