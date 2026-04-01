@@ -42,10 +42,9 @@
             transition: all 0.4s ease;
         }
 
-        .offer-card:hover {
+        .thumb-nav:hover {
             border-color: #bf953f;
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.07);
+            transform: scale(1.05);
         }
 
         /* Mobile Menu Animation */
@@ -87,122 +86,104 @@
 
         <div id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-slate-950 p-8 space-y-6 text-center text-[12px] font-black uppercase tracking-[0.3em] md:hidden shadow-2xl">
             <a href="index.html" class="hover:text-yellow-500 py-2">Home</a>
-            <a href="about.html" class="hover:text-yellow-500 py-2 border-t border-white/5">About</a>
-            <a href="packages.html" class="hover:text-yellow-500 py-2 border-t border-white/5">Tours</a>
-            <a href="exclusive-escapes.html" class="gold-text py-2 border-t border-white/5">Specials</a>
-            <a href="fleet.html" class="hover:text-yellow-500 py-2 border-t border-white/5">Fleet</a>
-            <a href="gallery.html" class="hover:text-yellow-500 py-2 border-t border-white/5">Gallery</a>
+            <a href="about.html" class="hover:text-yellow-500 py-2">About</a>
+            <a href="packages.html" class="hover:text-yellow-500 py-2">Tours</a>
+            <a href="exclusive-escapes.html" class="gold-text py-2">Specials</a>
             <a href="contact.html" class="bg-white text-black py-4 rounded-full mt-4">Contact</a>
         </div>
     </nav>
 
     <main class="flex-grow pt-40 pb-20 px-6 relative z-10">
-        <section class="max-w-6xl mx-auto">
+        <section class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter">Exclusive <span class="gold-text">Escapes</span></h2>
-                <p class="text-[10px] uppercase tracking-[0.5em] opacity-60 mt-4">Limited-Time Heritage & Luxury Offers</p>
+                <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter">Exclusive <span class="gold-text">Escapes</span></h2>
+                <p class="text-[10px] uppercase tracking-[0.6em] opacity-60 mt-4">Curated Limited-Time Journeys</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-                
-                <div class="offer-card p-1 rounded-[30px] border-yellow-600/30 lg:scale-105">
-                    <div class="relative overflow-hidden rounded-[28px]">
-                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover" alt="Vaal River Package">
-                        <div class="absolute top-4 left-4 bg-yellow-600 text-black px-4 py-1 rounded-full font-black text-[9px] uppercase tracking-widest">
-                            Best Value
-                        </div>
-                        <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
-                            <span class="gold-text text-[9px] font-bold uppercase tracking-tighter">Valid until 31 Oct 2026</span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-black uppercase italic tracking-tighter">2 Night Vaal <br><span class="gold-text">Getaway</span></h3>
-                            <div class="text-right">
-                                <span class="text-xs opacity-50 block uppercase">Only</span>
-                                <span class="text-2xl font-black gold-text italic">R3 590</span>
-                                <span class="text-[9px] block opacity-50 uppercase font-bold mt-1">Per Couple</span>
-                            </div>
+            <div class="offer-card p-2 rounded-[40px] border-yellow-600/30 overflow-hidden mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    
+                    <div class="p-4">
+                        <div class="relative overflow-hidden rounded-[30px] mb-4 group shadow-2xl">
+                            <img src="vaal-room-1.jpg" id="mainDisplay" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" alt="Vaal Luxury">
+                            <div class="absolute top-6 left-6 bg-yellow-600 text-black px-5 py-1 rounded-full font-black text-[10px] uppercase tracking-widest shadow-xl">Featured Offer</div>
                         </div>
                         
-                        <p class="text-[10px] opacity-60 uppercase tracking-widest mb-6 leading-relaxed">
-                            The perfect weekend getaway. Enjoy a well deserved break in the Vaal, only 45 Min from JHB.
+                        <div class="grid grid-cols-6 gap-3 px-2">
+                            <img src="vaal-room-1.jpg" class="thumb-nav h-16 w-full object-cover rounded-xl cursor-pointer border-2 border-white/10 transition" onclick="updatePreview(this)">
+                            <img src="vaal-room-2.jpg" class="thumb-nav h-16 w-full object-cover rounded-xl cursor-pointer border-2 border-white/10 transition" onclick="updatePreview(this)">
+                            <img src="vaal-bathroom.jpg" class="thumb-nav h-16 w-full object-cover rounded-xl cursor-pointer border-2 border-white/10 transition" onclick="updatePreview(this)">
+                            <img src="vaal-breakfast.jpg" class="thumb-nav h-16 w-full object-cover rounded-xl cursor-pointer border-2 border-white/10 transition" onclick="updatePreview(this)">
+                            <img src="vaal-dinner.jpg" class="thumb-nav h-16 w-full object-cover rounded-xl cursor-pointer border-2 border-white/10 transition" onclick="updatePreview(this)">
+                            <img src="vaal-safari.jpg" class="thumb-nav h-16 w-full object-cover rounded-xl cursor-pointer border-2 border-white/10 transition" onclick="updatePreview(this)">
+                        </div>
+                    </div>
+
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-8">
+                            <div>
+                                <h3 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter leading-none">2 Night Vaal <br><span class="gold-text">Package</span></h3>
+                                <div class="inline-block bg-white/5 border border-white/10 px-4 py-2 rounded-full mt-4">
+                                    <p class="text-[10px] font-bold uppercase tracking-widest opacity-80">Valid until 31 Oct 2026</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-3xl font-black gold-text italic">R3 590</span>
+                                <span class="text-[10px] block opacity-50 uppercase font-bold mt-1">Total Per Couple</span>
+                            </div>
+                        </div>
+
+                        <p class="text-[12px] opacity-60 uppercase tracking-[0.2em] mb-10 leading-relaxed max-w-md">
+                            The perfect weekend getaway. Enjoy a well deserved break in the Vaal, only 45 Min from Johannesburg. Selection of luxury rooms and daily curated experiences.
                         </p>
 
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center text-[9px] uppercase tracking-[0.2em] font-bold">
-                                <i class="fas fa-check-circle text-yellow-600 mr-2"></i> 2 Nights' Accommodation
-                            </li>
-                            <li class="flex items-center text-[9px] uppercase tracking-[0.2em] font-bold">
-                                <i class="fas fa-check-circle text-yellow-600 mr-2"></i> Breakfast Daily
-                            </li>
-                            <li class="flex items-center text-[9px] uppercase tracking-[0.2em] font-bold">
-                                <i class="fas fa-check-circle text-yellow-600 mr-2"></i> Zoo Entry + 45 Min Game Drive
-                            </li>
-                            <li class="flex items-center text-[9px] uppercase tracking-[0.2em] font-bold">
-                                <i class="fas fa-check-circle text-yellow-600 mr-2"></i> 1 Hour Vaal River Cruise
-                            </li>
-                        </ul>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                            <div class="flex items-center text-[10px] uppercase font-bold tracking-widest"><i class="fas fa-moon text-yellow-600 mr-3"></i> 2 Nights Stay</div>
+                            <div class="flex items-center text-[10px] uppercase font-bold tracking-widest"><i class="fas fa-coffee text-yellow-600 mr-3"></i> Breakfast Daily</div>
+                            <div class="flex items-center text-[10px] uppercase font-bold tracking-widest"><i class="fas fa-ship text-yellow-600 mr-3"></i> 1Hr River Cruise</div>
+                            <div class="flex items-center text-[10px] uppercase font-bold tracking-widest"><i class="fas fa-paw text-yellow-600 mr-3"></i> Zoo & Game Drive</div>
+                        </div>
 
                         <a href="https://wa.me/27639938057?text=Hi%20Ebbrato%20Travel,%20I'm%20interested%20in%20the%20Vaal%20Package%20for%20R3590" 
-                           class="block w-full text-center bg-white text-black font-black uppercase text-[10px] tracking-widest py-4 rounded-full hover:bg-yellow-600 hover:text-white transition-all transform hover:scale-[1.02]">
-                            Book via WhatsApp
+                           class="group relative overflow-hidden bg-white text-black font-black uppercase text-[12px] tracking-[0.3em] py-6 rounded-full text-center hover:bg-yellow-600 hover:text-white transition-all duration-500 shadow-2xl">
+                           <span class="relative z-10">Secure This Escape</span>
                         </a>
                     </div>
                 </div>
-
-                <div class="offer-card p-1 rounded-[30px]">
-                    <div class="relative overflow-hidden rounded-[28px]">
-                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover" alt="Kruger Special">
-                        <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-yellow-600/50">
-                            <span class="gold-text text-[10px] font-bold">LTD TIME</span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold uppercase italic mb-2">Kruger Gold Weekend</h3>
-                        <p class="text-[9px] opacity-50 uppercase tracking-widest mb-6 leading-relaxed">3 Days of private luxury safari with dedicated chauffeur and VIP dining.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-black italic gold-text">R12,500pp</span>
-                            <a href="contact.html" class="text-[9px] font-bold uppercase tracking-widest bg-white text-black px-6 py-3 rounded-full hover:bg-yellow-600 hover:text-white transition">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="offer-card p-1 rounded-[30px]">
-                    <div class="relative overflow-hidden rounded-[28px]">
-                        <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover" alt="Soweto Special">
-                        <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-yellow-600/50">
-                            <span class="gold-text text-[10px] font-bold">HERITAGE</span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold uppercase italic mb-2">Soweto Soul Tour</h3>
-                        <p class="text-[9px] opacity-50 uppercase tracking-widest mb-6 leading-relaxed">Exclusive 1-day heritage journey including private chef lunch at Vilakazi St.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-black italic gold-text">R3,200pp</span>
-                            <a href="contact.html" class="text-[9px] font-bold uppercase tracking-widest bg-white text-black px-6 py-3 rounded-full hover:bg-yellow-600 hover:text-white transition">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
         </section>
     </main>
 
-    <footer class="py-16 bg-black/60 backdrop-blur-md border-t border-white/10 text-center w-full relative z-10">
-        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/70">
+    <footer class="py-16 bg-black/80 backdrop-blur-md border-t border-white/5 text-center w-full relative z-10">
+        <p class="text-[10px] font-bold uppercase tracking-[0.5em] text-white/60">
             Johannesburg • Soweto • Cape Town and Beyond
         </p>
-        <p class="text-[8px] opacity-30 uppercase tracking-widest mt-6">
+        <p class="text-[9px] opacity-20 uppercase tracking-widest mt-6">
             &copy; 2026 EBBRATO TRAVEL • BY GASA TECH
         </p>
     </footer>
 
-    <a href="https://wa.me/27639938057" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 shadow-2xl hover:scale-110 transition">
+    <a href="https://wa.me/27639938057" class="fixed bottom-10 right-10 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl z-50 shadow-2xl hover:scale-110 active:scale-95 transition-all">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
+        // Interactive Gallery Function
+        function updatePreview(el) {
+            const mainImg = document.getElementById('mainDisplay');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = el.src;
+                mainImg.style.opacity = '1';
+            }, 200);
+            
+            // Highlight active thumb
+            document.querySelectorAll('.thumb-nav').forEach(t => t.style.borderColor = 'rgba(255,255,255,0.1)');
+            el.style.borderColor = '#bf953f';
+        }
+
+        // Mobile Menu
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -210,25 +191,8 @@
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('active');
-            
-            if (mobileMenu.classList.contains('active')) {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
-            } else {
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-            }
-        });
-
-        // Close menu if a link is clicked
-        const navLinks = mobileMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('active');
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-            });
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
         });
     </script>
 </body>
